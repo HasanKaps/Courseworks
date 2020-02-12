@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>100</x>
+      <y>50</y>
+      <w>630</w>
+      <h>490</h>
+    </coordinates>
+    <panel_attributes>Functional Requirements
+
+Functional
+
+•	Flight Progress Strip (FPS) must be converted to (Electronic Flight Progress Strip) EFPS.
+•	Primary mode of communication must be Command Messaging System(CMS)
+•	CMS must use predefined message as a means of communication
+•	EFPS must be maintained by AIC and APC
+•	ATC must have Flight Plan Lodging(FPL)
+•	FPL must allow pilots to log their Flight Plan (FP) electronically
+•	EFPS must be generated automatically and send to AIC
+•	AIC must guide aircraft to the runway for take-off
+•	APC must guide aircraft to the runway for landing
+•	APC must provide aircraft with Weather Report(WR)
+•	AIC must provide aircraft with gate number before touchdown
+
+Non-Functional
+
+•	Secondary mode of communication should be radio for aircraft to controller and landline for controller to controller.
+•	AIC and APC are presented with EFPS information via touch screen display
+•	E-FPS information are change via scribe
+•	FP should be archived to Flight Plan Database(FPDB)
+•	Pilot information must be validated by Pilot Database (PDB)
+•	WR should be sent to APC every 15 minutes
+•	GMC should communicate with AIC for aircraft taxi
+•	AIC must record the Actual Time of Departure(ATD) on the EFPS
+•	AIC must record the Actual Time of Arrival(ATA) on the EFPS
+•	AIC should send a copy of EFPS to ATCC before archiving
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLActor</id>
+    <coordinates>
+      <x>1080</x>
+      <y>750</y>
+      <w>60</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>FPDB</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLActor</id>
+    <coordinates>
+      <x>990</x>
+      <y>110</y>
+      <w>60</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>Aircraft</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLActor</id>
+    <coordinates>
+      <x>1360</x>
+      <y>550</y>
+      <w>60</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>PDB</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLActor</id>
+    <coordinates>
+      <x>770</x>
+      <y>540</y>
+      <w>60</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>Pilot
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLActor</id>
+    <coordinates>
+      <x>1270</x>
+      <y>80</y>
+      <w>60</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>GMC</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLActor</id>
+    <coordinates>
+      <x>1180</x>
+      <y>100</y>
+      <w>60</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>AIC</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>1620</x>
+      <y>710</y>
+      <w>120</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>Generating EFPS</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLActor</id>
+    <coordinates>
+      <x>1350</x>
+      <y>400</y>
+      <w>60</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>ATC</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>1560</x>
+      <y>750</y>
+      <w>120</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>FPL</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLActor</id>
+    <coordinates>
+      <x>1550</x>
+      <y>760</y>
+      <w>60</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>Actor</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>910</x>
+      <y>550</y>
+      <w>120</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>Generates
+EFPS</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>790</x>
+      <y>560</y>
+      <w>140</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;20.0;120.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1550</x>
+      <y>620</y>
+      <w>100</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;include&gt;&gt;</panel_attributes>
+    <additional_attributes>30.0;10.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1790</x>
+      <y>620</y>
+      <w>100</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;include&gt;&gt;</panel_attributes>
+    <additional_attributes>80.0;20.0;10.0;30.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1020</x>
+      <y>570</y>
+      <w>110</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>Logs in
+</panel_attributes>
+    <additional_attributes>10.0;10.0;90.0;30.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1590</x>
+      <y>800</y>
+      <w>160</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;include&gt;&gt;</panel_attributes>
+    <additional_attributes>140.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1580</x>
+      <y>750</y>
+      <w>100</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;30.0;80.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1270</x>
+      <y>570</y>
+      <w>140</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>Has Access</panel_attributes>
+    <additional_attributes>10.0;30.0;120.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>1670</x>
+      <y>360</y>
+      <w>120</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>Use case 1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLActor</id>
+    <coordinates>
+      <x>1060</x>
+      <y>270</y>
+      <w>60</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>FPL</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1560</x>
+      <y>750</y>
+      <w>140</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>Logs in
+</panel_attributes>
+    <additional_attributes>70.0;30.0;90.0;10.0;10.0;40.0</additional_attributes>
+  </element>
+</diagram>
