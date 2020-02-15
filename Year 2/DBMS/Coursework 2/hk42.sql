@@ -22,6 +22,8 @@ SELECT MIN(year), title FROM imdb_movies;
  
 SELECT COUNT(*) FROM(SELECT COUNT(*) FROM imdb_movies2directors GROUP BY movieid HAVING count(*) > 5)a;
 
+
+
 #question 4
 
 SELECT title FROM imdb_movies, (SELECT MAX(count),movieid as id FROM(SELECT COUNT(*) AS count, movieid FROM imdb_movies2directors GROUP BY movieid)a)b WHERE movieid = id;
@@ -32,7 +34,7 @@ SELECT title FROM imdb_movies, (SELECT MAX(count),movieid as id FROM(SELECT COUN
 
 SELECT SUM(time1) FROM imdb_runningtimes,(SELECT movieid as id FROM imdb_movies2directors WHERE genre='Sci-Fi')a WHERE movieid = id;
 
- 
+
 
 #question 6
 
@@ -41,8 +43,6 @@ SELECT COUNT(*) FROM imdb_movies2actors WHERE actorid IN (SELECT actorid FROM im
 
 
 #question 7
-
-**Needs Review**
 
 SELECT COUNT(*) FROM
 (
@@ -62,6 +62,7 @@ ON movie1 = movie2 AND act1 != act2
 )d;
 
 
+
 #question 8
 
 SELECT '1960' AS Decade, COUNT(*) FROM imdb_movies WHERE year > 1959 AND year < 1970
@@ -74,12 +75,14 @@ SELECT '1990' AS Decade, COUNT(*) FROM imdb_movies WHERE year > 1989 AND year < 
 UNION
 SELECT '2000' AS Decade, COUNT(*) FROM imdb_movies WHERE year > 1999 AND year < 2011;
 
+
+
 #question 9
 
-*** Gets the number of female actors in each movie
 SELECT COUNT(*), movieid, FROM 
 (SELECT movieid, sex FROM imdb_movies2actors JOIN imdb_actors ON imdb_movies2actors.actorid = imdb_actors.actorid WHERE sex = 'F')a
  GROUP BY movieID;
+
 
 
 #question 10
@@ -93,14 +96,14 @@ SELECT imdb_ratings.movieid, rank, votes, genre FROM imdb_ratings JOIN imdb_movi
 )b ORDER BY ranking DESC LIMIT 1;
 
 
-#question 11
 
-**Probably needs fixing
+#question 11
 
 SELECT id, name, genres FROM
 (
 SELECT actorid as id, COUNT(DISTINCT(genre)) AS genres FROM imdb_movies2directors JOIN imdb_movies2actors ON imdb_movies2directors.movieid = imdb_movies2actors.movieid GROUP BY actorid 
 )a JOIN imdb_actors ON id = actorid  WHERE genres > 9;
+
 
 
 #question 12
@@ -117,11 +120,9 @@ JOIN imdb_writers ON writerid = wrt
 )b WHERE dirname = actname AND actname = wrtname;
 
 
-#question 13
-#Which decade has the highest average ranked movies? 
-#(put the first year from the decade, so for 1900-1909 you would put 1900) 
-**Needs Review**
 
+#question 13
+ 
 SELECT MAX(ranking), Decade FROM (
 SELECT AVG(rank) AS ranking, '1900' as Decade, year FROM imdb_movies JOIN imdb_ratings ON imdb_movies.movieid = imdb_ratings.movieid WHERE year Between 1900 AND 1909
 UNION
@@ -147,22 +148,21 @@ SELECT AVG(rank) AS ranking, '2000' as Decade, year FROM imdb_movies JOIN imdb_r
 
 
 
-
 #question 14
 
 SELECT COUNT(*) FROM imdb_movies2directors WHERE genre IS NULL;
 
-#question 15
 
-**Needs Review**
+
+#question 15
 
 SELECT COUNT(*) FROM
 (
 SELECT id, imdb_directors.name as dirname, imdb_actors.name as actname, imdb_writers.name as wrtname, lead FROM
 (
 SELECT directorid as dir, 
-actorid as act, 
-writerid as wrt, 
+actorid as actor, 
+writerid as writer, 
 imdb_movies2directors.movieid as id, 
 imdb_movies2actors.leading as lead  
 FROM imdb_movies2directors 
@@ -172,8 +172,8 @@ JOIN imdb_movies2actors ON
 imdb_movies2directors.movieid = imdb_movies2actors.movieid 
 )a 
 JOIN imdb_directors ON directorid = dir 
-JOIN imdb_actors ON actorid = act 
-JOIN imdb_writers ON writerid = wrt
+JOIN imdb_actors ON actorid = actor 
+JOIN imdb_writers ON writerid = writert
 )b WHERE dirname = actname AND actname = wrtname AND lead > 1;
 
 
