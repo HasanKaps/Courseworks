@@ -11,7 +11,6 @@
 SELECT COUNT(sex) FROM imdb_actors WHERE sex ="F"; 
 
 
-
 #question 2
 
 SELECT year , title FROM imdb_movies ORDER BY year ASC LIMIT 1;
