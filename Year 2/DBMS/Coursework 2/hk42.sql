@@ -28,7 +28,7 @@ GROUP BY movieid ORDER BY TitleCount DESC LIMIT 1;
 
 #question 5
 
-SELECT SUM(time1) FROM imdb_runningtimes,(SELECT movieid as id FROM imdb_movies2directors WHERE genre='Sci-Fi')a WHERE movieid = id;
+SELECT SUM(time1) FROM imdb_runningtimes JOIN imdb_movies2directors on imdb_runningtimes.movieid = imdb_movies2directors.movieid WHERE genre='Sci-Fi';
 
 
 #question 6
