@@ -354,7 +354,7 @@ bg=yellow
       <h>28</h>
     </coordinates>
     <panel_attributes>lt=.
-clearRunwayTime &gt; maxTime &amp;&amp; altitude &gt; 600ft</panel_attributes>
+                                     altitude = 600 ft</panel_attributes>
     <additional_attributes>10.0;20.0;780.0;20.0</additional_attributes>
   </element>
   <element>
@@ -392,7 +392,7 @@ bg=yellow
       <h>28</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-
-getOvershoot</panel_attributes>
+Overshoot instructed</panel_attributes>
     <additional_attributes>140.0;20.0;10.0;20.0</additional_attributes>
   </element>
   <element>
