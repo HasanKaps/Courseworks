@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="14.3.0">
-  <zoom_level>8</zoom_level>
+  <zoom_level>6</zoom_level>
   <element>
     <id>UMLSpecialState</id>
     <coordinates>
-      <x>912</x>
-      <y>88</y>
-      <w>16</w>
-      <h>16</h>
+      <x>816</x>
+      <y>96</y>
+      <w>12</w>
+      <h>12</h>
     </coordinates>
     <panel_attributes>type=initial</panel_attributes>
     <additional_attributes/>
@@ -15,10 +15,10 @@
   <element>
     <id>UMLObject</id>
     <coordinates>
-      <x>368</x>
-      <y>56</y>
-      <w>200</w>
-      <h>880</h>
+      <x>408</x>
+      <y>72</y>
+      <w>150</w>
+      <h>660</h>
     </coordinates>
     <panel_attributes>APC
 -
@@ -29,10 +29,10 @@ valign=top</panel_attributes>
   <element>
     <id>UMLObject</id>
     <coordinates>
-      <x>1016</x>
-      <y>56</y>
-      <w>200</w>
-      <h>880</h>
+      <x>894</x>
+      <y>72</y>
+      <w>150</w>
+      <h>660</h>
     </coordinates>
     <panel_attributes>GMC
 -
@@ -43,10 +43,10 @@ valign=top</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>912</x>
-      <y>96</y>
-      <w>24</w>
-      <h>48</h>
+      <x>816</x>
+      <y>102</y>
+      <w>18</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
     <additional_attributes>10.0;40.0;10.0;10.0</additional_attributes>
@@ -54,12 +54,12 @@ valign=top</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>880</x>
-      <y>128</y>
-      <w>88</w>
-      <h>32</h>
+      <x>792</x>
+      <y>126</y>
+      <w>66</w>
+      <h>24</h>
     </coordinates>
-    <panel_attributes>request
+    <panel_attributes>Request
 gate number
 type=sender</panel_attributes>
     <additional_attributes/>
@@ -67,10 +67,10 @@ type=sender</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>960</x>
-      <y>136</y>
-      <w>160</w>
-      <h>24</h>
+      <x>852</x>
+      <y>132</y>
+      <w>120</w>
+      <h>18</h>
     </coordinates>
     <panel_attributes>lt=-&gt;</panel_attributes>
     <additional_attributes>10.0;10.0;180.0;10.0</additional_attributes>
@@ -78,12 +78,12 @@ type=sender</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>1088</x>
-      <y>128</y>
-      <w>80</w>
-      <h>32</h>
+      <x>948</x>
+      <y>126</y>
+      <w>60</w>
+      <h>24</h>
     </coordinates>
-    <panel_attributes>receive
+    <panel_attributes>Receive
 request
 type=receiver</panel_attributes>
     <additional_attributes/>
@@ -91,10 +91,10 @@ type=receiver</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1120</x>
-      <y>152</y>
-      <w>24</w>
-      <h>72</h>
+      <x>972</x>
+      <y>144</y>
+      <w>18</w>
+      <h>54</h>
     </coordinates>
     <panel_attributes>lt=-&gt;</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
@@ -102,12 +102,12 @@ type=receiver</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>1088</x>
-      <y>208</y>
-      <w>88</w>
-      <h>32</h>
+      <x>948</x>
+      <y>186</y>
+      <w>66</w>
+      <h>24</h>
     </coordinates>
-    <panel_attributes>send
+    <panel_attributes>Send
 gate number
 type=sender</panel_attributes>
     <additional_attributes/>
@@ -115,12 +115,12 @@ type=sender</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>880</x>
-      <y>208</y>
-      <w>88</w>
-      <h>32</h>
+      <x>792</x>
+      <y>186</y>
+      <w>66</w>
+      <h>24</h>
     </coordinates>
-    <panel_attributes>receive
+    <panel_attributes>Receive
 gate number
 type=receiver</panel_attributes>
     <additional_attributes/>
@@ -128,10 +128,10 @@ type=receiver</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>960</x>
-      <y>216</y>
-      <w>144</w>
-      <h>24</h>
+      <x>852</x>
+      <y>192</y>
+      <w>108</w>
+      <h>18</h>
     </coordinates>
     <panel_attributes>lt=-&gt;</panel_attributes>
     <additional_attributes>160.0;10.0;10.0;10.0</additional_attributes>
@@ -139,10 +139,10 @@ type=receiver</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>920</x>
-      <y>232</y>
-      <w>24</w>
-      <h>88</h>
+      <x>822</x>
+      <y>204</y>
+      <w>18</w>
+      <h>66</h>
     </coordinates>
     <panel_attributes>lt=-&gt;</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
@@ -150,22 +150,22 @@ type=receiver</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>880</x>
-      <y>304</y>
-      <w>88</w>
-      <h>32</h>
+      <x>792</x>
+      <y>258</y>
+      <w>72</w>
+      <h>24</h>
     </coordinates>
-    <panel_attributes>log gate number
+    <panel_attributes>Log gate number
 in EFPS</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>680</x>
-      <y>328</y>
-      <w>264</w>
-      <h>120</h>
+      <x>642</x>
+      <y>276</y>
+      <w>198</w>
+      <h>90</h>
     </coordinates>
     <panel_attributes>lt=-&gt;</panel_attributes>
     <additional_attributes>310.0;10.0;310.0;60.0;10.0;60.0;10.0;130.0</additional_attributes>
@@ -173,33 +173,33 @@ in EFPS</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>648</x>
-      <y>696</y>
-      <w>88</w>
-      <h>32</h>
+      <x>618</x>
+      <y>552</y>
+      <w>66</w>
+      <h>24</h>
     </coordinates>
-    <panel_attributes>touch down
+    <panel_attributes>Touch down
 aircraft</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>888</x>
-      <y>704</y>
-      <w>88</w>
-      <h>32</h>
+      <x>798</x>
+      <y>558</y>
+      <w>66</w>
+      <h>24</h>
     </coordinates>
-    <panel_attributes>record ata</panel_attributes>
+    <panel_attributes>Record ATA</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLSyncBarHorizontal</id>
     <coordinates>
-      <x>680</x>
-      <y>744</y>
-      <w>296</w>
-      <h>16</h>
+      <x>642</x>
+      <y>588</y>
+      <w>222</w>
+      <h>12</h>
     </coordinates>
     <panel_attributes>lw=5
 </panel_attributes>
@@ -208,10 +208,10 @@ aircraft</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>680</x>
-      <y>720</y>
-      <w>24</w>
-      <h>48</h>
+      <x>642</x>
+      <y>570</y>
+      <w>18</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>lt=-&gt;</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;40.0</additional_attributes>
@@ -219,10 +219,10 @@ aircraft</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>920</x>
-      <y>728</y>
-      <w>24</w>
-      <h>40</h>
+      <x>822</x>
+      <y>576</y>
+      <w>18</w>
+      <h>30</h>
     </coordinates>
     <panel_attributes>lt=-&gt;</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;30.0</additional_attributes>
@@ -230,10 +230,10 @@ aircraft</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>816</x>
-      <y>744</y>
-      <w>128</w>
-      <h>56</h>
+      <x>744</x>
+      <y>588</y>
+      <w>96</w>
+      <h>42</h>
     </coordinates>
     <panel_attributes>lt=-&gt;</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;30.0;140.0;30.0;140.0;50.0</additional_attributes>
@@ -241,22 +241,22 @@ aircraft</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>888</x>
-      <y>784</y>
-      <w>88</w>
-      <h>32</h>
+      <x>798</x>
+      <y>618</y>
+      <w>66</w>
+      <h>24</h>
     </coordinates>
-    <panel_attributes>log ata
-in EFPS</panel_attributes>
+    <panel_attributes>Log ATA
+in eFPS</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>920</x>
-      <y>808</y>
-      <w>24</w>
-      <h>48</h>
+      <x>822</x>
+      <y>636</y>
+      <w>18</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>lt=-&gt;</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;40.0</additional_attributes>
@@ -264,21 +264,21 @@ in EFPS</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>888</x>
-      <y>840</y>
-      <w>88</w>
-      <h>32</h>
+      <x>798</x>
+      <y>660</y>
+      <w>66</w>
+      <h>24</h>
     </coordinates>
-    <panel_attributes>archive EFPS</panel_attributes>
+    <panel_attributes>Archive eFPS</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLSpecialState</id>
     <coordinates>
-      <x>920</x>
-      <y>904</y>
-      <w>16</w>
-      <h>16</h>
+      <x>822</x>
+      <y>708</y>
+      <w>12</w>
+      <h>12</h>
     </coordinates>
     <panel_attributes>type=final</panel_attributes>
     <additional_attributes/>
@@ -286,10 +286,10 @@ in EFPS</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>920</x>
-      <y>864</y>
-      <w>24</w>
-      <h>56</h>
+      <x>822</x>
+      <y>678</y>
+      <w>18</w>
+      <h>42</h>
     </coordinates>
     <panel_attributes>lt=-&gt;</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
@@ -297,22 +297,22 @@ in EFPS</panel_attributes>
   <element>
     <id>UMLObject</id>
     <coordinates>
-      <x>368</x>
-      <y>32</y>
-      <w>856</w>
-      <h>24</h>
+      <x>408</x>
+      <y>54</y>
+      <w>636</w>
+      <h>18</h>
     </coordinates>
-    <panel_attributes>Aircraft arrival
+    <panel_attributes>*Aircraft Arrival*
 valign=top</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLSpecialState</id>
     <coordinates>
-      <x>672</x>
-      <y>432</y>
-      <w>32</w>
-      <h>32</h>
+      <x>636</x>
+      <y>354</y>
+      <w>24</w>
+      <h>24</h>
     </coordinates>
     <panel_attributes>type=decision</panel_attributes>
     <additional_attributes/>
@@ -320,10 +320,10 @@ valign=top</panel_attributes>
   <element>
     <id>UMLObject</id>
     <coordinates>
-      <x>568</x>
-      <y>56</y>
-      <w>224</w>
-      <h>880</h>
+      <x>558</x>
+      <y>72</y>
+      <w>168</w>
+      <h>660</h>
     </coordinates>
     <panel_attributes>Pilot
 -
@@ -334,10 +334,10 @@ valign=top</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>696</x>
-      <y>432</y>
-      <w>232</w>
-      <h>88</h>
+      <x>654</x>
+      <y>354</y>
+      <w>174</w>
+      <h>66</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 [takes too long to
@@ -347,26 +347,24 @@ clear the runway]</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>680</x>
-      <y>456</y>
-      <w>104</w>
-      <h>200</h>
+      <x>642</x>
+      <y>372</y>
+      <w>78</w>
+      <h>150</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
-does not take 
-long to clear the 
-runway</panel_attributes>
+Clears Runaway</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;230.0</additional_attributes>
   </element>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>872</x>
-      <y>504</y>
-      <w>88</w>
-      <h>32</h>
+      <x>786</x>
+      <y>408</y>
+      <w>66</w>
+      <h>24</h>
     </coordinates>
-    <panel_attributes>instruct pilot 
+    <panel_attributes>Instruct pilot 
 to overshoot
 type=sender</panel_attributes>
     <additional_attributes/>
@@ -374,10 +372,10 @@ type=sender</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>656</x>
-      <y>504</y>
-      <w>232</w>
-      <h>32</h>
+      <x>624</x>
+      <y>408</y>
+      <w>174</w>
+      <h>24</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 </panel_attributes>
@@ -386,12 +384,12 @@ type=sender</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>584</x>
-      <y>504</y>
-      <w>80</w>
-      <h>32</h>
+      <x>570</x>
+      <y>408</y>
+      <w>60</w>
+      <h>24</h>
     </coordinates>
-    <panel_attributes>receive 
+    <panel_attributes>Receive 
 instruction
 type=receiver</panel_attributes>
     <additional_attributes/>
@@ -399,10 +397,10 @@ type=receiver</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>624</x>
-      <y>528</y>
-      <w>24</w>
-      <h>80</h>
+      <x>600</x>
+      <y>426</y>
+      <w>18</w>
+      <h>60</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 </panel_attributes>
@@ -411,22 +409,22 @@ type=receiver</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>592</x>
-      <y>592</y>
-      <w>80</w>
-      <h>32</h>
+      <x>576</x>
+      <y>474</y>
+      <w>60</w>
+      <h>24</h>
     </coordinates>
-    <panel_attributes>overshoot
+    <panel_attributes>Overshoot
 aircraft</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>464</x>
-      <y>592</y>
-      <w>144</w>
-      <h>32</h>
+      <x>480</x>
+      <y>474</y>
+      <w>108</w>
+      <h>24</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 </panel_attributes>
@@ -435,22 +433,22 @@ aircraft</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>392</x>
-      <y>592</y>
-      <w>80</w>
-      <h>32</h>
+      <x>426</x>
+      <y>474</y>
+      <w>60</w>
+      <h>24</h>
     </coordinates>
-    <panel_attributes>take control
+    <panel_attributes>Take control
 from AIC</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>424</x>
-      <y>616</y>
-      <w>24</w>
-      <h>88</h>
+      <x>450</x>
+      <y>492</y>
+      <w>18</w>
+      <h>66</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 </panel_attributes>
@@ -459,10 +457,10 @@ from AIC</panel_attributes>
   <element>
     <id>UMLSpecialState</id>
     <coordinates>
-      <x>424</x>
-      <y>688</y>
-      <w>16</w>
-      <h>16</h>
+      <x>450</x>
+      <y>546</y>
+      <w>12</w>
+      <h>12</h>
     </coordinates>
     <panel_attributes>type=final</panel_attributes>
     <additional_attributes/>
@@ -470,10 +468,10 @@ from AIC</panel_attributes>
   <element>
     <id>UMLObject</id>
     <coordinates>
-      <x>792</x>
-      <y>56</y>
-      <w>224</w>
-      <h>880</h>
+      <x>726</x>
+      <y>72</y>
+      <w>168</w>
+      <h>660</h>
     </coordinates>
     <panel_attributes>AIC
 -
@@ -484,10 +482,10 @@ valign=top</panel_attributes>
   <element>
     <id>UMLSyncBarHorizontal</id>
     <coordinates>
-      <x>680</x>
-      <y>632</y>
-      <w>296</w>
-      <h>16</h>
+      <x>642</x>
+      <y>504</y>
+      <w>222</w>
+      <h>12</h>
     </coordinates>
     <panel_attributes>lw=5
 </panel_attributes>
@@ -496,10 +494,10 @@ valign=top</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>680</x>
-      <y>632</y>
-      <w>24</w>
-      <h>80</h>
+      <x>642</x>
+      <y>504</y>
+      <w>18</w>
+      <h>60</h>
     </coordinates>
     <panel_attributes>lt=-&gt;</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
@@ -507,10 +505,10 @@ valign=top</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>920</x>
-      <y>632</y>
-      <w>24</w>
-      <h>88</h>
+      <x>822</x>
+      <y>504</y>
+      <w>18</w>
+      <h>66</h>
     </coordinates>
     <panel_attributes>lt=-&gt;</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>

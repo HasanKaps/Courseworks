@@ -28,57 +28,56 @@ fontsize=18
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>585</x>
-      <y>310</y>
-      <w>130</w>
+      <x>620</x>
+      <y>20</y>
+      <w>160</w>
       <h>205</h>
     </coordinates>
     <panel_attributes>_AIC_
 --
 eFPS : eFPS
 --
-+create()
-+getEFPS
-+allocateDepartureSlot
-+getEFPS						
-+getPushbackRequest
-+allowPushback		 
-+getControlFromGMC
-+allowAircraftToTaxi
-+sendFinalClearance
-+recordATD
-+handoverControlToATCC
-+sendEFPS
-+tagEFPS
-+archiveEFPS
-+getControlFromAPC
-+getGateNumber
-+sendGateNumber
-+recordATA</panel_attributes>
+
++ Access eFPS
++ Allocate Departure Slot
++ Access EFPS						
++ Pushback Request
++ Allow Pushback		 
++ Recieve Aircraft Control From GMC
++ Allow Aircraft to Taxi
++ Aquire Final Clearance
++ Record ATD
++ Handover Control to ATCC
++ Send eFPS
++ Mark eFPS
++ Archive eFPS
++ Recieve Control From APC
++ Recieve Gate Number
++ Sends Gate Number to Pilot
++ Record ATA</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>285</x>
-      <y>355</y>
+      <x>345</x>
+      <y>250</y>
       <w>120</w>
-      <h>130</h>
+      <h>125</h>
     </coordinates>
     <panel_attributes>APC
 --
 Weather Info : WR
--directionalInfo:Sttring
+Directional Info:Sttring
 eFPS :eFPS
 --
-+getEFPS
-+getControlFromATCC
-+SendDirectionalInfo
-+SendWeatherReport
-+logAirspeedInstruction
-+logAltitudeInstruction
-+handoverControlToAIC
-+RoutAircraft
++ Access EFPS
++ Get Control From ATCC
++ Send Directional Info
++ Send Weather Report
++ Log Airspeed Instruction
++ Log Altitude Instruction
++ Handover control to AIC
 
 </panel_attributes>
     <additional_attributes/>
@@ -86,32 +85,33 @@ eFPS :eFPS
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>870</x>
-      <y>660</y>
+      <x>625</x>
+      <y>570</y>
       <w>120</w>
-      <h>130</h>
+      <h>145</h>
     </coordinates>
     <panel_attributes>_FPL_
 --
--FP
--name
--licenseNumber
+FP
+Name
+License Number
 --
-+getFP
-+getName
-+getLicenseNumber
-+validatePilotDetails
-+getDepartureGate
-+archiveFP
-+generateEFPS
-+sendEFPSToAIC</panel_attributes>
++ Create(eFPS)
++ Get FP
++ Get Name
++ Get License Number
++ Validate Pilot Details
++ Get Departure Gate
++ Archive FP
++ Generate EFPS
++ Send EFPS to AIC</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>25</x>
-      <y>385</y>
+      <x>15</x>
+      <y>280</y>
       <w>135</w>
       <h>60</h>
     </coordinates>
@@ -129,22 +129,21 @@ Visibility : String
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>870</x>
-      <y>355</y>
+      <x>845</x>
+      <y>235</y>
       <w>135</w>
       <h>140</h>
     </coordinates>
     <panel_attributes>_GMC_
 --
--gateNumbers
--callSign
+Gate Number
 --
-+sendGateNumberToFPL
-+getRequestForPushback
-+sendRequestForPushback
-+getConfirmationForPushback
-+allowAircraftPushback
-+sendGateNumberToAIC
++ Send Gate Number to FPL
++ Get Request for Pushback
++ Send Request for Pushback
++ Get confirmation for Pushback
++ Allow Aircraft Pushback
++ Send Gate Number to AIC
 
 </panel_attributes>
     <additional_attributes/>
@@ -152,24 +151,23 @@ Visibility : String
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>580</x>
-      <y>660</y>
+      <x>615</x>
+      <y>370</y>
       <w>135</w>
       <h>130</h>
     </coordinates>
     <panel_attributes>_EFPS_
 --
--AircraftType:String
--callSign:String
--altitude:Integer
--gateNumber:Integer
--ETA:String
--ATA:String
--ETD:String
--ATD:String
--routeInfo:String
--airspeedInstruction:String
--altitudeInstruction:String
+- Aircraft Information : String
+- Altitude : Integer
+- Gate Number : Integer
+- ETA : String
+- ATA : String
+- ETD : String
+- ATD : String
+- Route Info : String
+- Airspeed Information : String
+- Altitude Information : String
 
 
 
@@ -179,41 +177,41 @@ Visibility : String
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>155</x>
-      <y>420</y>
-      <w>140</w>
+      <x>145</x>
+      <y>315</y>
+      <w>210</w>
       <h>15</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>260.0;10.0;10.0;10.0</additional_attributes>
+    <additional_attributes>400.0;10.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>400</x>
-      <y>405</y>
-      <w>195</w>
-      <h>15</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>370.0;10.0;10.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>710</x>
-      <y>720</y>
+      <x>460</x>
+      <y>115</y>
       <w>170</w>
-      <h>15</h>
+      <h>200</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;320.0;10.0</additional_attributes>
+    <additional_attributes>320.0;10.0;10.0;380.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>645</x>
-      <y>510</y>
+      <x>675</x>
+      <y>495</y>
+      <w>15</w>
+      <h>85</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;150.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>680</x>
+      <y>220</y>
       <w>15</w>
       <h>160</h>
     </coordinates>
@@ -223,12 +221,12 @@ Visibility : String
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>710</x>
-      <y>405</y>
-      <w>170</w>
-      <h>15</h>
+      <x>775</x>
+      <y>115</y>
+      <w>80</w>
+      <h>185</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;320.0;10.0</additional_attributes>
+    <additional_attributes>10.0;10.0;140.0;350.0</additional_attributes>
   </element>
 </diagram>
