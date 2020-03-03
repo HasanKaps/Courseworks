@@ -1,4 +1,3 @@
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -48,78 +47,23 @@ int main(int args, char ** argv) {
     FILE *f;
     FILE *f2;
 
-    char data[20];
-
-    if(args == 4)
-    {
-
-        if(strcmp(argv[1]," e"))
-        {
         
-            
-            char message[1000];
-            int secretCode;
+    f = fopen("star.ppm","r");
 
-            f = fopen(argv[2], "r");
-            
+    struct PPM * ppm = getPPM(f);
 
-            // request message
-            printf("Write down your message\n");
-            fgets(message, 1000, stdin);
+    struct PPM * encodedPPM = encode(ppm, "Hello, MY name is gada", strlen("Hello, MY name is gada"), 245678);
+
+    char * message = decode(encodedPPM, 245678);
 
 
-            //request secret code
-            printf("\nWrite down your secret code\n");
-            fgets(data, 20, stdin);
+    printf("\n%s\n", message);
 
-            secretCode = atoi(data);
+    createPPM(encodedPPM, "newppm.ppm");
 
+   
 
-            struct PPM * ppm = getPPM(f);
-
-            struct PPM * encodedPPM = encode(ppm, message, strlen(message), secretCode);
-
-            createPPM(encodedPPM, argv[3]);
-
-            fclose(f);
-        }
-    }
-
-    if(args == 3 )//decoding
-    {
-
-        if(strcmp(argv[1], "d "))
-        {
-            int secretCode;
-
-            //request secret code
-            printf("Write down your secret code\n");
-            fgets(data, 20, stdin);
-            
-            secretCode = atoi(data);
-            
-            
-
-            f = fopen("test3.ppm","r");
-            
-
-            struct PPM * ppm = getPPM(f);
-            
-
-            char * message = decode(ppm, (unsigned int)secretCode);
-
-            printf("\n%s\n", message);
-
-            fclose(f);
-        }
-
-
-    }else//error gada
-    {
-
-
-    }
-    
+    fclose(f);
 
     return 0;
 }
@@ -127,7 +71,6 @@ int main(int args, char ** argv) {
 struct PPM * getPPM(FILE * f)
 {
 
-    
     char charReader[255];
     int intReader;
     char letterCode[2];
@@ -138,7 +81,6 @@ struct PPM * getPPM(FILE * f)
 
     //get the letter code
     endline = fscanf(f, "%s", letterCode);
-    
 
     //get rid of the comments
     //untill width is scanned
@@ -158,7 +100,6 @@ struct PPM * getPPM(FILE * f)
         }
         
     }
-    
 
     //get the height
     endline = fscanf(f, "%s", charReader);
@@ -177,7 +118,7 @@ struct PPM * getPPM(FILE * f)
     ppm->max = atoi(charReader);
 
     
-    
+   
     while (i < (width * height * 3))
     {
         
@@ -192,19 +133,6 @@ struct PPM * getPPM(FILE * f)
 void showPPM(struct PPM * im)
 {
 
-    printf("%s\n", im->letterCode);
-    printf("%d %d\n%d", im->width, im->height, im->max);
-
-    int size = im->width * im->height;
-
-    int i = 0;
-    while(i < size)
-    {
-        printf("%d %d %d\n", im->values[i], im->values[i+1], im->values[i+2]);
-        i+=3;
-    }
-
-
 
 
 }
@@ -214,13 +142,13 @@ struct PPM * encode (struct PPM * im, char * message, unsigned int mSize, unsign
     int i;
     struct PPM * ppm = im;
 
+    createPPM(im, "im.ppm");
     int photoSize = im->width * im->height;
-    int primeNumber = getPrimeNumber((secret % photoSize));
+    int primeNumber = getPrimeNumber((secret % photoSize)/10);
     char * binary = strToBin(message);
 
     for(i = 0; i < (((mSize /3)* 8) + 3); i++)
     {
-
 
         int pixel = getPixel(secret, i, photoSize);
         int red = ppm->values[pixel * 3];
@@ -281,25 +209,21 @@ struct PPM * encode (struct PPM * im, char * message, unsigned int mSize, unsign
 
     return ppm;
 
+
+
 }
 
 
 char * decode(struct PPM * im, unsigned int secret)
 {
-
-    
-
     int i = 0;
     struct PPM * ppm = im;
     int photoSize = im->width * im->height;
     int primeNumber = getPrimeNumber((secret % photoSize));
-
-    char * binary = malloc(1000 * 8);
+    char * binary = malloc(500 * 8);
     int lastZero = 0;
-    
-    
 
-    while(lastZero < 42 && i < 2500) 
+    while(lastZero < 45)
     {
 
         int pixel = getPixel(secret, i, photoSize);
@@ -338,6 +262,8 @@ char * decode(struct PPM * im, unsigned int secret)
         }
         //printf("lastzero: %d\n", lastZero);
 
+
+
         ppm->values[pixel * 3] = red;
         ppm->values[pixel * 3 + 1] = blue;
         ppm->values[pixel * 3 + 2] = green;
@@ -345,9 +271,11 @@ char * decode(struct PPM * im, unsigned int secret)
         i++;
     }
 
-
+    
     char * res;
-    res = binary;
+    memcpy(res, &binary[0], strlen(binary)-45);
+
+    printf("\nbinary decoded: %s\n" , res);  
 
 
 
