@@ -1,0 +1,16 @@
+mysql -u root -p
+use myfilm;
+select * from actorskill;
+select * from actor where actor.fee > 1400000;
+select * FROM actor JOIN bankaccount on account = number;
+select * FROM actorskill where skillcode = 1;
+select name,skillcode from actorskill join actor on name = actorname join bankaccount on number = account where number =19204382;
+select name,dob from actor join bankaccount on number = account  where balance > 2000;
+select * from agent where contact = 729002394;
+select actor.name,dob from actor join actorskill on name=actorname join skill on skillcode=code where skill.name = "gritty drama";
+select agent.name from agent join actor on agent.name = agent where sex = "m";
+select agent.name from agent join actor on agent.name = agent join actorskill on actorname = actor.name join skill on skillcode =code where skill.name = "family friendly";
+select actor.name, actor.fee, bankaccount.balance from actor join bankaccount on actor.account = bankaccount.number join actorskill on actor.name = actorname join skill on skillcode = skill.code where skill.name = "action";
+select * from agent;
+select agent, sum(actor.fee) as "Total Earned" from actor group by agent;
+select actor.agent,actor.fee from actor where actor.fee >1300000 group by agent;

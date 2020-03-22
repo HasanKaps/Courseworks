@@ -1,0 +1,114 @@
+src/TestBlackwhite.java:7:	All classes and interfaces must belong to a named package
+src/TestBlackwhite.java:7:	Header comments are required
+src/TestBlackwhite.java:14:	It is a good practice to call super() in a constructor
+src/TestBlackwhite.java:14:	Public method and constructor comments are required
+src/TestBlackwhite.java:18:	Avoid unused private methods such as 'pause(long)'.
+src/TestBlackwhite.java:18:	Parameter 'millisecs' is not assigned and could be declared final
+src/TestBlackwhite.java:20:	Local variable 'startTime' could be declared final
+src/TestBlackwhite.java:20:	Potential violation of Law of Demeter (method chain calls)
+src/TestBlackwhite.java:21:	Avoid empty while statements
+src/TestBlackwhite.java:21:	Avoid using while statements without curly braces
+src/TestBlackwhite.java:21:	Potential violation of Law of Demeter (method chain calls)
+src/TestBlackwhite.java:21:	This statement should have braces
+src/TestBlackwhite.java:24:	Public method and constructor comments are required
+src/TestBlackwhite.java:26:	Found 'DU'-anomaly for variable 'rainbow' (lines '26'-'37').
+src/TestBlackwhite.java:26:	Local variable 'rainbow' could be declared final
+src/TestBlackwhite.java:29:	Avoid instantiating new objects inside loops
+src/TestBlackwhite.java:29:	Found 'DD'-anomaly for variable 'input' (lines '29'-'29').
+src/TestBlackwhite.java:29:	Found 'DU'-anomaly for variable 'input' (lines '29'-'37').
+src/TestBlackwhite.java:29:	Local variable 'input' could be declared final
+src/TestBlackwhite.java:30:	This for loop can be replaced by a foreach loop
+src/TestBlackwhite.java:34:	Potential violation of Law of Demeter (method chain calls)
+src/TestBlackwhite.java:34:	Potential violation of Law of Demeter (method chain calls)
+src/TestBlackwhite.java:40:	All classes and interfaces must belong to a named package
+src/TestBlackwhite.java:40:	Header comments are required
+src/TestBlackwhite.java:41:	All methods are static.  Consider using a utility class instead. Alternatively, you could add a private constructor or make the class abstract to silence this warning.
+src/TestBlackwhite.java:42:	Parameter 'args' is not assigned and could be declared final
+src/TestBlackwhite.java:42:	Public method and constructor comments are required
+src/TestBlackwhite.java:44:	Avoid variables with short names like b
+src/TestBlackwhite.java:52:	Avoid variables with short names like e
+src/TestBlackwhite.java:52:	Parameter 'e' is not assigned and could be declared final
+src/TestBlackwhite.java:52:	Public method and constructor comments are required
+src/TestBlackwhite.java:53:	System.exit() should not be used in J2EE/JEE apps
+src/TestBlackwhitePMD.java:7:	All classes and interfaces must belong to a named package
+src/TestBlackwhitePMD.java:7:	Header comments are required
+src/TestBlackwhitePMD.java:14:	It is a good practice to call super() in a constructor
+src/TestBlackwhitePMD.java:14:	Public method and constructor comments are required
+src/TestBlackwhitePMD.java:18:	Avoid unused private methods such as 'pause(long)'.
+src/TestBlackwhitePMD.java:18:	Parameter 'millisecs' is not assigned and could be declared final
+src/TestBlackwhitePMD.java:20:	Local variable 'startTime' could be declared final
+src/TestBlackwhitePMD.java:20:	Potential violation of Law of Demeter (method chain calls)
+src/TestBlackwhitePMD.java:21:	Avoid empty while statements
+src/TestBlackwhitePMD.java:21:	Avoid using while statements without curly braces
+src/TestBlackwhitePMD.java:21:	Potential violation of Law of Demeter (method chain calls)
+src/TestBlackwhitePMD.java:21:	This statement should have braces
+src/TestBlackwhitePMD.java:24:	Public method and constructor comments are required
+src/TestBlackwhitePMD.java:26:	Found 'DU'-anomaly for variable 'rainbow' (lines '26'-'37').
+src/TestBlackwhitePMD.java:26:	Local variable 'rainbow' could be declared final
+src/TestBlackwhitePMD.java:29:	Avoid instantiating new objects inside loops
+src/TestBlackwhitePMD.java:29:	Found 'DD'-anomaly for variable 'input' (lines '29'-'29').
+src/TestBlackwhitePMD.java:29:	Found 'DU'-anomaly for variable 'input' (lines '29'-'37').
+src/TestBlackwhitePMD.java:29:	Local variable 'input' could be declared final
+src/TestBlackwhitePMD.java:30:	This for loop can be replaced by a foreach loop
+src/TestBlackwhitePMD.java:34:	Potential violation of Law of Demeter (method chain calls)
+src/TestBlackwhitePMD.java:34:	Potential violation of Law of Demeter (method chain calls)
+src/TestBlackwhitePMD.java:40:	All classes and interfaces must belong to a named package
+src/TestBlackwhitePMD.java:40:	Header comments are required
+src/TestBlackwhitePMD.java:41:	All methods are static.  Consider using a utility class instead. Alternatively, you could add a private constructor or make the class abstract to silence this warning.
+src/TestBlackwhitePMD.java:42:	Parameter 'args' is not assigned and could be declared final
+src/TestBlackwhitePMD.java:42:	Public method and constructor comments are required
+src/TestBlackwhitePMD.java:44:	Avoid variables with short names like b
+src/TestBlackwhitePMD.java:52:	Avoid variables with short names like e
+src/TestBlackwhitePMD.java:52:	Parameter 'e' is not assigned and could be declared final
+src/TestBlackwhitePMD.java:52:	Public method and constructor comments are required
+src/TestBlackwhitePMD.java:53:	System.exit() should not be used in J2EE/JEE apps
+src/TestWhite.java:5:	All classes and interfaces must belong to a named package
+src/TestWhite.java:5:	Header comments are required
+src/TestWhite.java:12:	It is a good practice to call super() in a constructor
+src/TestWhite.java:12:	Parameter 'color' is not assigned and could be declared final
+src/TestWhite.java:12:	Public method and constructor comments are required
+src/TestWhite.java:18:	All classes and interfaces must belong to a named package
+src/TestWhite.java:18:	Header comments are required
+src/TestWhite.java:19:	All methods are static.  Consider using a utility class instead. Alternatively, you could add a private constructor or make the class abstract to silence this warning.
+src/TestWhite.java:20:	Parameter 'args' is not assigned and could be declared final
+src/TestWhite.java:20:	Public method and constructor comments are required
+src/TestWhite.java:22:	Avoid variables with short names like r
+src/TestWhite.java:30:	Avoid variables with short names like e
+src/TestWhite.java:30:	Parameter 'e' is not assigned and could be declared final
+src/TestWhite.java:30:	Public method and constructor comments are required
+src/TestWhite.java:31:	System.exit() should not be used in J2EE/JEE apps
+src/TestWhite.java:34:	Avoid variables with short names like b
+src/TestWhite.java:42:	Avoid variables with short names like e
+src/TestWhite.java:42:	Parameter 'e' is not assigned and could be declared final
+src/TestWhite.java:42:	Public method and constructor comments are required
+src/TestWhite.java:43:	System.exit() should not be used in J2EE/JEE apps
+src/TestWhite.java:47:	Avoid variables with short names like g
+src/TestWhite.java:55:	Avoid variables with short names like e
+src/TestWhite.java:55:	Parameter 'e' is not assigned and could be declared final
+src/TestWhite.java:55:	Public method and constructor comments are required
+src/TestWhite.java:56:	System.exit() should not be used in J2EE/JEE apps
+src/TestWhitePMD.java:5:	All classes and interfaces must belong to a named package
+src/TestWhitePMD.java:5:	Header comments are required
+src/TestWhitePMD.java:12:	It is a good practice to call super() in a constructor
+src/TestWhitePMD.java:12:	Parameter 'color' is not assigned and could be declared final
+src/TestWhitePMD.java:12:	Public method and constructor comments are required
+src/TestWhitePMD.java:18:	All classes and interfaces must belong to a named package
+src/TestWhitePMD.java:18:	Header comments are required
+src/TestWhitePMD.java:19:	All methods are static.  Consider using a utility class instead. Alternatively, you could add a private constructor or make the class abstract to silence this warning.
+src/TestWhitePMD.java:20:	Parameter 'args' is not assigned and could be declared final
+src/TestWhitePMD.java:20:	Public method and constructor comments are required
+src/TestWhitePMD.java:22:	Avoid variables with short names like r
+src/TestWhitePMD.java:30:	Avoid variables with short names like e
+src/TestWhitePMD.java:30:	Parameter 'e' is not assigned and could be declared final
+src/TestWhitePMD.java:30:	Public method and constructor comments are required
+src/TestWhitePMD.java:31:	System.exit() should not be used in J2EE/JEE apps
+src/TestWhitePMD.java:34:	Avoid variables with short names like b
+src/TestWhitePMD.java:42:	Avoid variables with short names like e
+src/TestWhitePMD.java:42:	Parameter 'e' is not assigned and could be declared final
+src/TestWhitePMD.java:42:	Public method and constructor comments are required
+src/TestWhitePMD.java:43:	System.exit() should not be used in J2EE/JEE apps
+src/TestWhitePMD.java:47:	Avoid variables with short names like g
+src/TestWhitePMD.java:55:	Avoid variables with short names like e
+src/TestWhitePMD.java:55:	Parameter 'e' is not assigned and could be declared final
+src/TestWhitePMD.java:55:	Public method and constructor comments are required
+src/TestWhitePMD.java:56:	System.exit() should not be used in J2EE/JEE apps

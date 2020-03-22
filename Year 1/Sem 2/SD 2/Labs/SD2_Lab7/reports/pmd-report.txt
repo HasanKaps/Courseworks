@@ -1,0 +1,220 @@
+src/lab7/CalculatorPMD.java:13:	Header comments are required
+src/lab7/CalculatorPMD.java:13:	Header comments are required
+src/lab7/CalculatorPMD.java:15:	Field comments are required
+src/lab7/CalculatorPMD.java:15:	Field comments are required
+src/lab7/CalculatorPMD.java:15:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/lab7/CalculatorPMD.java:15:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/lab7/CalculatorPMD.java:16:	Field comments are required
+src/lab7/CalculatorPMD.java:16:	Field comments are required
+src/lab7/CalculatorPMD.java:16:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/lab7/CalculatorPMD.java:16:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/lab7/CalculatorPMD.java:17:	Field comments are required
+src/lab7/CalculatorPMD.java:17:	Field comments are required
+src/lab7/CalculatorPMD.java:17:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/lab7/CalculatorPMD.java:17:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/lab7/CalculatorPMD.java:17:	Private field 'buttons' could be made final; it is only initialized in the declaration or constructor.
+src/lab7/CalculatorPMD.java:17:	Private field 'buttons' could be made final; it is only initialized in the declaration or constructor.
+src/lab7/CalculatorPMD.java:18:	Field comments are required
+src/lab7/CalculatorPMD.java:18:	Field comments are required
+src/lab7/CalculatorPMD.java:18:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/lab7/CalculatorPMD.java:18:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/lab7/CalculatorPMD.java:18:	The field name 'AccumalatorBox' doesn't match '[a-z][a-zA-Z0-9]*'
+src/lab7/CalculatorPMD.java:18:	The field name 'AccumalatorBox' doesn't match '[a-z][a-zA-Z0-9]*'
+src/lab7/CalculatorPMD.java:18:	Variables should start with a lowercase character, 'AccumalatorBox' starts with uppercase character.
+src/lab7/CalculatorPMD.java:18:	Variables should start with a lowercase character, 'AccumalatorBox' starts with uppercase character.
+src/lab7/CalculatorPMD.java:19:	Field comments are required
+src/lab7/CalculatorPMD.java:19:	Field comments are required
+src/lab7/CalculatorPMD.java:19:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/lab7/CalculatorPMD.java:19:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/lab7/CalculatorPMD.java:19:	The field name 'Textbox' doesn't match '[a-z][a-zA-Z0-9]*'
+src/lab7/CalculatorPMD.java:19:	The field name 'Textbox' doesn't match '[a-z][a-zA-Z0-9]*'
+src/lab7/CalculatorPMD.java:19:	Variables should start with a lowercase character, 'Textbox' starts with uppercase character.
+src/lab7/CalculatorPMD.java:19:	Variables should start with a lowercase character, 'Textbox' starts with uppercase character.
+src/lab7/CalculatorPMD.java:20:	Field comments are required
+src/lab7/CalculatorPMD.java:20:	Field comments are required
+src/lab7/CalculatorPMD.java:20:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/lab7/CalculatorPMD.java:20:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/lab7/CalculatorPMD.java:20:	Perhaps 'buttonPanel' could be replaced by a local variable.
+src/lab7/CalculatorPMD.java:20:	Perhaps 'buttonPanel' could be replaced by a local variable.
+src/lab7/CalculatorPMD.java:21:	Field comments are required
+src/lab7/CalculatorPMD.java:21:	Field comments are required
+src/lab7/CalculatorPMD.java:21:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/lab7/CalculatorPMD.java:21:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/lab7/CalculatorPMD.java:21:	Perhaps 'clear' could be replaced by a local variable.
+src/lab7/CalculatorPMD.java:21:	Perhaps 'clear' could be replaced by a local variable.
+src/lab7/CalculatorPMD.java:22:	Field comments are required
+src/lab7/CalculatorPMD.java:22:	Field comments are required
+src/lab7/CalculatorPMD.java:22:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/lab7/CalculatorPMD.java:22:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/lab7/CalculatorPMD.java:22:	Perhaps 'add' could be replaced by a local variable.
+src/lab7/CalculatorPMD.java:22:	Perhaps 'add' could be replaced by a local variable.
+src/lab7/CalculatorPMD.java:23:	Field comments are required
+src/lab7/CalculatorPMD.java:23:	Field comments are required
+src/lab7/CalculatorPMD.java:23:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/lab7/CalculatorPMD.java:23:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/lab7/CalculatorPMD.java:23:	Perhaps 'minus' could be replaced by a local variable.
+src/lab7/CalculatorPMD.java:23:	Perhaps 'minus' could be replaced by a local variable.
+src/lab7/CalculatorPMD.java:24:	Field comments are required
+src/lab7/CalculatorPMD.java:24:	Field comments are required
+src/lab7/CalculatorPMD.java:24:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/lab7/CalculatorPMD.java:24:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/lab7/CalculatorPMD.java:24:	Perhaps 'multiply' could be replaced by a local variable.
+src/lab7/CalculatorPMD.java:24:	Perhaps 'multiply' could be replaced by a local variable.
+src/lab7/CalculatorPMD.java:25:	Field comments are required
+src/lab7/CalculatorPMD.java:25:	Field comments are required
+src/lab7/CalculatorPMD.java:25:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/lab7/CalculatorPMD.java:25:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/lab7/CalculatorPMD.java:25:	Perhaps 'divide' could be replaced by a local variable.
+src/lab7/CalculatorPMD.java:25:	Perhaps 'divide' could be replaced by a local variable.
+src/lab7/CalculatorPMD.java:27:	Public method and constructor comments are required
+src/lab7/CalculatorPMD.java:27:	Public method and constructor comments are required
+src/lab7/CalculatorPMD.java:33:	Overridable method 'Layout' called during object construction
+src/lab7/CalculatorPMD.java:33:	Overridable method 'Layout' called during object construction
+src/lab7/CalculatorPMD.java:38:	Public method and constructor comments are required
+src/lab7/CalculatorPMD.java:38:	Public method and constructor comments are required
+src/lab7/CalculatorPMD.java:38:	The instance method name 'Layout' doesn't match '[a-z][a-zA-Z0-9]*'
+src/lab7/CalculatorPMD.java:38:	The instance method name 'Layout' doesn't match '[a-z][a-zA-Z0-9]*'
+src/lab7/CalculatorPMD.java:52:	Parameter 'clear' is not assigned and could be declared final
+src/lab7/CalculatorPMD.java:52:	Parameter 'clear' is not assigned and could be declared final
+src/lab7/CalculatorPMD.java:52:	Public method and constructor comments are required
+src/lab7/CalculatorPMD.java:52:	Public method and constructor comments are required
+src/lab7/CalculatorPMD.java:53:	Avoid autogenerated methods to access private fields and methods of inner / outer classes
+src/lab7/CalculatorPMD.java:53:	Avoid autogenerated methods to access private fields and methods of inner / outer classes
+src/lab7/CalculatorPMD.java:54:	Avoid autogenerated methods to access private fields and methods of inner / outer classes
+src/lab7/CalculatorPMD.java:54:	Avoid autogenerated methods to access private fields and methods of inner / outer classes
+src/lab7/CalculatorPMD.java:55:	Avoid autogenerated methods to access private fields and methods of inner / outer classes
+src/lab7/CalculatorPMD.java:55:	Avoid autogenerated methods to access private fields and methods of inner / outer classes
+src/lab7/CalculatorPMD.java:55:	Avoid autogenerated methods to access private fields and methods of inner / outer classes
+src/lab7/CalculatorPMD.java:55:	Avoid autogenerated methods to access private fields and methods of inner / outer classes
+src/lab7/CalculatorPMD.java:63:	Parameter 'add' is not assigned and could be declared final
+src/lab7/CalculatorPMD.java:63:	Parameter 'add' is not assigned and could be declared final
+src/lab7/CalculatorPMD.java:63:	Public method and constructor comments are required
+src/lab7/CalculatorPMD.java:63:	Public method and constructor comments are required
+src/lab7/CalculatorPMD.java:64:	Avoid autogenerated methods to access private fields and methods of inner / outer classes
+src/lab7/CalculatorPMD.java:64:	Avoid autogenerated methods to access private fields and methods of inner / outer classes
+src/lab7/CalculatorPMD.java:72:	Parameter 'minus' is not assigned and could be declared final
+src/lab7/CalculatorPMD.java:72:	Parameter 'minus' is not assigned and could be declared final
+src/lab7/CalculatorPMD.java:72:	Public method and constructor comments are required
+src/lab7/CalculatorPMD.java:72:	Public method and constructor comments are required
+src/lab7/CalculatorPMD.java:73:	Avoid autogenerated methods to access private fields and methods of inner / outer classes
+src/lab7/CalculatorPMD.java:73:	Avoid autogenerated methods to access private fields and methods of inner / outer classes
+src/lab7/CalculatorPMD.java:82:	Parameter 'multiply' is not assigned and could be declared final
+src/lab7/CalculatorPMD.java:82:	Parameter 'multiply' is not assigned and could be declared final
+src/lab7/CalculatorPMD.java:82:	Public method and constructor comments are required
+src/lab7/CalculatorPMD.java:82:	Public method and constructor comments are required
+src/lab7/CalculatorPMD.java:83:	Avoid autogenerated methods to access private fields and methods of inner / outer classes
+src/lab7/CalculatorPMD.java:83:	Avoid autogenerated methods to access private fields and methods of inner / outer classes
+src/lab7/CalculatorPMD.java:91:	Parameter 'divide' is not assigned and could be declared final
+src/lab7/CalculatorPMD.java:91:	Parameter 'divide' is not assigned and could be declared final
+src/lab7/CalculatorPMD.java:91:	Public method and constructor comments are required
+src/lab7/CalculatorPMD.java:91:	Public method and constructor comments are required
+src/lab7/CalculatorPMD.java:92:	Avoid autogenerated methods to access private fields and methods of inner / outer classes
+src/lab7/CalculatorPMD.java:92:	Avoid autogenerated methods to access private fields and methods of inner / outer classes
+src/lab7/CalculatorPMD.java:100:	Parameter 'calculations' is not assigned and could be declared final
+src/lab7/CalculatorPMD.java:100:	Parameter 'calculations' is not assigned and could be declared final
+src/lab7/CalculatorPMD.java:103:	Found 'DU'-anomaly for variable 'input' (lines '103'-'135').
+src/lab7/CalculatorPMD.java:103:	Found 'DU'-anomaly for variable 'input' (lines '103'-'135').
+src/lab7/CalculatorPMD.java:103:	Local variable 'input' could be declared final
+src/lab7/CalculatorPMD.java:103:	Local variable 'input' could be declared final
+src/lab7/CalculatorPMD.java:104:	A switch statement does not contain a break
+src/lab7/CalculatorPMD.java:104:	A switch statement does not contain a break
+src/lab7/CalculatorPMD.java:115:	Avoid if (x != y) ..; else ..;
+src/lab7/CalculatorPMD.java:115:	Avoid if (x != y) ..; else ..;
+src/lab7/CalculatorPMD.java:118:	System.out.println is used
+src/lab7/CalculatorPMD.java:118:	System.out.println is used
+src/lab7/CalculatorPMD.java:137:	Parameter 'args' is not assigned and could be declared final
+src/lab7/CalculatorPMD.java:137:	Parameter 'args' is not assigned and could be declared final
+src/lab7/CalculatorPMD.java:137:	Public method and constructor comments are required
+src/lab7/CalculatorPMD.java:137:	Public method and constructor comments are required
+src/lab7/SizePMD.java:14:	Header comments are required
+src/lab7/SizePMD.java:14:	Header comments are required
+src/lab7/SizePMD.java:20:	Field comments are required
+src/lab7/SizePMD.java:20:	Field comments are required
+src/lab7/SizePMD.java:20:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/lab7/SizePMD.java:20:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/lab7/SizePMD.java:20:	Perhaps 'font' could be replaced by a local variable.
+src/lab7/SizePMD.java:20:	Perhaps 'font' could be replaced by a local variable.
+src/lab7/SizePMD.java:21:	Field comments are required
+src/lab7/SizePMD.java:21:	Field comments are required
+src/lab7/SizePMD.java:21:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/lab7/SizePMD.java:21:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/lab7/SizePMD.java:21:	Perhaps 'display' could be replaced by a local variable.
+src/lab7/SizePMD.java:21:	Perhaps 'display' could be replaced by a local variable.
+src/lab7/SizePMD.java:22:	Field comments are required
+src/lab7/SizePMD.java:22:	Field comments are required
+src/lab7/SizePMD.java:22:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/lab7/SizePMD.java:22:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/lab7/SizePMD.java:23:	Field comments are required
+src/lab7/SizePMD.java:23:	Field comments are required
+src/lab7/SizePMD.java:23:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/lab7/SizePMD.java:23:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/lab7/SizePMD.java:24:	Field comments are required
+src/lab7/SizePMD.java:24:	Field comments are required
+src/lab7/SizePMD.java:24:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/lab7/SizePMD.java:24:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/lab7/SizePMD.java:24:	Perhaps 'buttonPanel' could be replaced by a local variable.
+src/lab7/SizePMD.java:24:	Perhaps 'buttonPanel' could be replaced by a local variable.
+src/lab7/SizePMD.java:25:	Field comments are required
+src/lab7/SizePMD.java:25:	Field comments are required
+src/lab7/SizePMD.java:25:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/lab7/SizePMD.java:25:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/lab7/SizePMD.java:25:	Perhaps 'Increase' could be replaced by a local variable.
+src/lab7/SizePMD.java:25:	Perhaps 'Increase' could be replaced by a local variable.
+src/lab7/SizePMD.java:25:	The field name 'Increase' doesn't match '[a-z][a-zA-Z0-9]*'
+src/lab7/SizePMD.java:25:	The field name 'Increase' doesn't match '[a-z][a-zA-Z0-9]*'
+src/lab7/SizePMD.java:25:	Variables should start with a lowercase character, 'Increase' starts with uppercase character.
+src/lab7/SizePMD.java:25:	Variables should start with a lowercase character, 'Increase' starts with uppercase character.
+src/lab7/SizePMD.java:26:	Field comments are required
+src/lab7/SizePMD.java:26:	Field comments are required
+src/lab7/SizePMD.java:26:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/lab7/SizePMD.java:26:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/lab7/SizePMD.java:26:	Perhaps 'Decrease' could be replaced by a local variable.
+src/lab7/SizePMD.java:26:	Perhaps 'Decrease' could be replaced by a local variable.
+src/lab7/SizePMD.java:26:	The field name 'Decrease' doesn't match '[a-z][a-zA-Z0-9]*'
+src/lab7/SizePMD.java:26:	The field name 'Decrease' doesn't match '[a-z][a-zA-Z0-9]*'
+src/lab7/SizePMD.java:26:	Variables should start with a lowercase character, 'Decrease' starts with uppercase character.
+src/lab7/SizePMD.java:26:	Variables should start with a lowercase character, 'Decrease' starts with uppercase character.
+src/lab7/SizePMD.java:27:	Field comments are required
+src/lab7/SizePMD.java:27:	Field comments are required
+src/lab7/SizePMD.java:28:	Field comments are required
+src/lab7/SizePMD.java:28:	Field comments are required
+src/lab7/SizePMD.java:28:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/lab7/SizePMD.java:28:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/lab7/SizePMD.java:29:	Public method and constructor comments are required
+src/lab7/SizePMD.java:29:	Public method and constructor comments are required
+src/lab7/SizePMD.java:33:	Overridable method 'Layout' called during object construction
+src/lab7/SizePMD.java:33:	Overridable method 'Layout' called during object construction
+src/lab7/SizePMD.java:38:	Public method and constructor comments are required
+src/lab7/SizePMD.java:38:	Public method and constructor comments are required
+src/lab7/SizePMD.java:38:	The instance method name 'Layout' doesn't match '[a-z][a-zA-Z0-9]*'
+src/lab7/SizePMD.java:38:	The instance method name 'Layout' doesn't match '[a-z][a-zA-Z0-9]*'
+src/lab7/SizePMD.java:55:	Parameter 'arg0' is not assigned and could be declared final
+src/lab7/SizePMD.java:55:	Parameter 'arg0' is not assigned and could be declared final
+src/lab7/SizePMD.java:55:	Public method and constructor comments are required
+src/lab7/SizePMD.java:55:	Public method and constructor comments are required
+src/lab7/SizePMD.java:56:	Avoid autogenerated methods to access private fields and methods of inner / outer classes
+src/lab7/SizePMD.java:56:	Avoid autogenerated methods to access private fields and methods of inner / outer classes
+src/lab7/SizePMD.java:56:	Avoid autogenerated methods to access private fields and methods of inner / outer classes
+src/lab7/SizePMD.java:56:	Avoid autogenerated methods to access private fields and methods of inner / outer classes
+src/lab7/SizePMD.java:57:	Avoid autogenerated methods to access private fields and methods of inner / outer classes
+src/lab7/SizePMD.java:57:	Avoid autogenerated methods to access private fields and methods of inner / outer classes
+src/lab7/SizePMD.java:57:	Avoid autogenerated methods to access private fields and methods of inner / outer classes
+src/lab7/SizePMD.java:57:	Avoid autogenerated methods to access private fields and methods of inner / outer classes
+src/lab7/SizePMD.java:63:	Parameter 'arg0' is not assigned and could be declared final
+src/lab7/SizePMD.java:63:	Parameter 'arg0' is not assigned and could be declared final
+src/lab7/SizePMD.java:63:	Public method and constructor comments are required
+src/lab7/SizePMD.java:63:	Public method and constructor comments are required
+src/lab7/SizePMD.java:64:	Avoid autogenerated methods to access private fields and methods of inner / outer classes
+src/lab7/SizePMD.java:64:	Avoid autogenerated methods to access private fields and methods of inner / outer classes
+src/lab7/SizePMD.java:65:	Avoid autogenerated methods to access private fields and methods of inner / outer classes
+src/lab7/SizePMD.java:65:	Avoid autogenerated methods to access private fields and methods of inner / outer classes
+src/lab7/SizePMD.java:65:	Avoid autogenerated methods to access private fields and methods of inner / outer classes
+src/lab7/SizePMD.java:65:	Avoid autogenerated methods to access private fields and methods of inner / outer classes
+src/lab7/SizePMD.java:66:	Avoid autogenerated methods to access private fields and methods of inner / outer classes
+src/lab7/SizePMD.java:66:	Avoid autogenerated methods to access private fields and methods of inner / outer classes
+src/lab7/SizePMD.java:66:	Avoid autogenerated methods to access private fields and methods of inner / outer classes
+src/lab7/SizePMD.java:66:	Avoid autogenerated methods to access private fields and methods of inner / outer classes
+src/lab7/SizePMD.java:73:	Parameter 'args' is not assigned and could be declared final
+src/lab7/SizePMD.java:73:	Parameter 'args' is not assigned and could be declared final
+src/lab7/SizePMD.java:73:	Public method and constructor comments are required
+src/lab7/SizePMD.java:73:	Public method and constructor comments are required

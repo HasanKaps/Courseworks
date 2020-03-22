@@ -1,0 +1,29 @@
+Either Ar game from last year 
+
+new mit appp inventor game with 6 mini gamaes inside it 
+
+
+
+
+
+
+
+
+AR Game-
+
+bug fixes for current games in the app
+
+add two or three new games in the app 
+
+
+
+MIT App Inventor-
+
+6 minigames in the app
+
+Pong 
+Snake 
+Memory Game
+Golf Game
+Tic Tac Toe
+

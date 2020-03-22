@@ -1,0 +1,35 @@
+(App to help new students (Freshers) coming to HWUD to get adjusted to the Area and place)-
+
+How will it work- 
+
+Gives overview of campus- (partially done could be made better)
+ 
+Gives Information of diffrent buildings in campus  (Done (But Could be made better I think))
+
+Gives information about area around campus (part of campus overview)
+
+Notes- uses tinydb to store notes made when notes screen reopened shows all notes written (can store multipe notes)
+
+(Try to make CW 1 as good as possible) 
+
+
+
+
+
+CW-2  
+
+Gives information about famous "hotspot" locations for students to go to   |
+                                                                           |> Filtering option 
+Gives location of areas user wants to go                                   |
+
+Checklist- similar to notes but when tickbox checked that certain note gets removed 
+
+reminder page- sets reminders and if time completed sends notification/ push notification that time allocated has passed
+ 
+Taxi Service
+
+Can connect with social media sites 
+
+can share photos and other things
+
+

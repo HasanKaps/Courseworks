@@ -1,0 +1,46 @@
+QUERY 1
+
+select City_Name from Cities where City_Name in (select City_Location from Sites where Category_ID = "MU");
+
+or
+
+select City_Name from Cities INNER JOIN Sites ON Cities.City_Name = Sites.City_Location where Sites.Category_ID= "MU";
+
+
+QUERY 2
+
+select City_Name from Cities INNER JOIN Countries ON Cities.Country_Location = Countries.Country_Name where Countries.Visa_Needed_UAE_PASSPORT_HOLDERS = "No";
+
+
+QUERY 3
+
+select City_Name from Cities where Country_Location in (select Country_Name from Countries where Visa_Needed_UAE_PASSPORT_HOLDERS = "No");  
+
+
+QUERY 4
+
+select User from Visit INNER JOIN Sites ON Sites.Name = Visit.Site where Sites.Name = "Eiffel Tower";
+
+
+Extra Queries 
+
+1-
+
+Displaying the names with an initial letter of "A" whose rating was greater than 4.
+
+select Site, Rating from Visit where SUBSTRING(User, 1, 1) ="A" && Rating > 4; 
+
+2- 
+
+Displaying both the distinct emails and ratings of users whose ratings were greater than the average rating of all that user's ratings
+Sum of ratings = 83
+Avg = 4.3
+select distinct Email, Rating from Users INNER JOIN Visit ON Visit.User = Users.User_Name where Visit.Rating > (select AVG(Rating) from Visit);
+
+
+
+
+
+
+
+
