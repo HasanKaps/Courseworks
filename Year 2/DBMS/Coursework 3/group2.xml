@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<hire>
+
+  <person>
+    <licensenumber lang="en">Automatic</licensenumber>
+    <address>
+      <lineone lang="en">Campus The Avenue</lineone>
+      <linetwo>Edinburgh</linetwo>
+      <postcode>EH14 4AS</postcode>
+    </address>
+    <phonenumber>07380665998</phonenumber>
+    <email>hkapadia2000@gmail.com</email>
+    <dateofbirth>
+      <date>
+        <day lang="en">15</day>
+        <Month>05</Month>
+        <year>1995</year>
+      </date>
+    </dateOfBirth>
+  </person>
+
+  <vehicle category="Small Car">
+    <transmission lang="en">Automatic</transmission>
+    <price>30.00</price>
+  </vehicle>
+
+  <totalprice>
+    30.00
+  </totalprice>
+
+  <startdate>
+    <date>
+      <day lang="en">23</day>
+      <month>11</month>
+      <year>2020</year>
+
+    </date>
+
+  </startdate>
+
+  <enddate>
+
+    <date>
+
+      <day lang="en">04</day>
+      <month>12</month>
+      <year>2020</year>
+
+    </date>
+
+  </enddate>
+
+  <startlocation>
+
+    <address>
+      <line lang="en">Campus The Avenue</line>
+      <line>Edinburgh</line>
+      <postcode>EH14 4AS</postcode>
+    </address>
+
+  </starlocation>
+
+  <endlocation>
+
+    <address>
+
+      <lineone lang="en">Ziyads Home</lineone>
+      <linetwo>Edinburgh</linetwo>
+      <postcode>EH13 3AS</postcode>
+
+    </address>
+
+  </endlocation>
+
+</hire>
