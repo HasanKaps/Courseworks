@@ -87,7 +87,6 @@
 	  <xs:sequence> 
 	    <xs:element name = "Total Price" type = "xs:string"/>
 	    <xs:element name ="startdate" type="xs:string" ref='Date'/> 
-		
 		<xs:element name ="enddate" type="xs:string" ref='Date'/> 
 		<xs:element name ="startlocation" type="xs:string" /> 
 		<xs:element name ="endlocation" type="xs:string"/>  
