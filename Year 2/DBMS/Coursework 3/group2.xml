@@ -18,7 +18,7 @@
         <Month>05</Month>
         <year>1995</year>
       </date>
-    </dateOfBirth>
+    </dateofbirth>
   </person>
 
   <vehicle category="Small Car">
@@ -60,7 +60,7 @@
       <postcode>EH14 4AS</postcode>
     </address>
 
-  </starlocation>
+  </startlocation>
 
   <endlocation>
 
