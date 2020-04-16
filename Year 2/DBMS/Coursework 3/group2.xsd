@@ -35,6 +35,7 @@
 
 
 <!-- the overall specification -->
+
 <xs:element name="Hire">
 
   <xs:complexType> 
