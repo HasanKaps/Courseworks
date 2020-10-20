@@ -1,0 +1,371 @@
+\title{\bf Foundations1 assignments I 2020\\
+Assignment I: Submit by Wednesday  of week 5 (14 October 2020) by 15:30 pm.\\ worth 15\%\\
+Submit only typed material through assessment on vision\\
+No handwritten material\\
+SUBMIT ONE SINGLE FILE IN PDF ONLY FOR THE ASNWERS+
+Submit your entire SML program AS ONE SINGLE SML FILE\\
+NO ZIP FILES.  NO MULTIPLE FILES. JUST ONE PDF FOR ANSWERS AND ONE SML FOR ALL THE CODE.}
+%\author{Fairouz Kamareddine }
+\documentclass[11pt]{article} 
+
+
+\usepackage{geometry}
+\geometry{verbose}
+
+\usepackage{verbatimbox}
+\usepackage{url}
+\usepackage{latexsym}
+\usepackage{amssymb, amsmath}
+\usepackage{color}
+
+% for \includegraphics
+\usepackage{graphicx}
+
+
+
+
+\def\rrightarrow{\rightarrow \hspace{-.65em} \rightarrow}
+\newcommand{\la}{\lambda}
+\newcommand{\sep}{\mbox{$.$}}  
+\newcommand{\at}{\mbox{$\hspace{0.2em}$}}  
+\newcommand{\be}{\beta}
+\def\Rar{\Rightarrow}
+\def\LRar{\Leftrightarrow}
+\def\grval{\hspace{.4ex} \mid \hspace{-.5ex} \stackrel{\it val}{= \hspace{-.5ex} =} \hspace{.4ex}}
+\def\isval{\hspace{.4ex} \stackrel{\it  val}{= \hspace{-.5ex} =} \hspace{.4ex}}
+\newcommand{\ult}[2]{\mbox{$\lambda {#1} \sep {#2}$}}  % untyped lambda term
+\def\ttT{{\tt True}}
+\def\ttF{{\tt False}}
+\def\nnull{{\bf null}}
+\newcommand \cI {\mbox{I}''}
+\newcommand \cK {\mbox{K}''}
+\newcommand \mycS {\mbox{S}''}
+\def\hd{{\bf hd}}
+\def\tl{{\bf tl}}
+\def\mycons{{\bf cons}}
+\def\append{{\bf append}}
+\def\reverse{{\bf reverse}}
+\def\tc{{\bf cond }}
+\def\tT{{\bf true }}
+\def\tf{{\bf false }}
+\newcommand \cM {\cal M}
+\def\equal{{\bf H }}
+\def\mycons{{\bf cons}}
+\def\append{{\bf append}}
+\def\reverse{{\bf reverse}}
+\def\tc{{\bf cond }}
+\def\tT{{\bf true }}
+\def\tf{{\bf false }}
+\def\pair{{\bf pair}}
+\def\fst{{\bf fst}}
+\def\snd{{\bf snd}}
+\def\ntuple{\mbox{{\bf n-tuple}}}
+\def\nnull{{\bf null}}
+\def\hd{{\bf hd}}
+\def\tl{{\bf tl}}
+\def\mycons{{\bf cons}}
+\def\append{{\bf append}}
+\def\reverse{{\bf reverse}}
+\def\zero{{\bf 0}}
+\def\one{{\bf 1}}
+\def\two{{\bf 2}}
+\def\three{{\bf 3}}
+\def\six{{\bf 6}}
+
+\def\myn{{\bf n}}
+\def\mym{{\bf m}}
+\def\mynn{{\bf n+1}}
+\def\mynm{{\bf n+m}}
+\def\myntm{{\bf nxm}}
+\def\succ{{\bf succ}}
+\def\add{{\bf add}}
+\def\iszero{{\bf iszero}}
+\def\times{{\bf times}}
+\def\fact{{\bf fact}}
+\def\factfn{{\bf factfn}}
+\def\pre{{\bf pre}}
+
+
+
+
+
+
+
+
+
+\begin{document}
+\date{}
+
+\maketitle
+
+\section*{Background}
+\begin{itemize}
+\item
+The syntax of the classical $\lambda$-calculus is given by
+$\cM  \: ::=  \:  {\cal V} \:|\: ( \la{{\cal V}}.{\cM}) \:|\: ( \cM \cM)$.\\
+We assume the usual notational conventions in $\cM$ and use 
+the reduction rule: \\$\underline{(\la v. P)Q} \rightarrow_\be P[v:=Q]$.
+\item
+The syntax of the  $\lambda$-calculus in item notation is given by
+$\cM'  \: ::=  \:  {\cal V} \:|\: [{\cal V}]\cM' \:|\: \langle\cM'\rangle\cM'$.\\
+We use the reduction rule: 
+$ \underline{\langle Q'\rangle[v]}P' \rightarrow_{\be'} [v:=Q']P'$\\
+where $[v:=Q']P'$ is defined in a similar way to $P[v:=Q]$.
+\item
+ In $\cM$, $(PQ)$ stands for the application of function $P$ to argument $Q$.\\
+ In $\cM'$, $\langle Q'\rangle P'$ stands for the application of function $P'$ to argument $Q'$ (note the reverse order).\\For example: \\
+ $(\la x.x)y$ in ${\cal M}$ becomes $ \langle y \rangle[x]x$ in ${\cal M}'$.\\
+ $(\la x.(\la y.xy)z)(\la z'.z')$ in ${\cal M}$ becomes
+ $ \langle[z']z' \rangle[x] \langle z \rangle[y] \langle y \rangle  x$ in ${\cal M}'$.
+
+\item
+The syntax of the classical $\lambda$-calculus with de Bruijn indices is given by\\
+$\Lambda  \: ::=  \:  {\mathbb{N}} \:|\: ( \la{}{\Lambda}) \:|\: ( \Lambda \Lambda)$.\\
+For example: $(\la 1)$ is a term (it is equivalent to $\la x.x$ and $\la y.y$, etc). \\
+Also $(\la (\la 1 \: 2))$ is also a term. It stands as you will see for $\la xy.yx$.\\
+Also, $(\la (\la 2 \: 1))$ is also a term. It stands as you will see for $\la xy.xy$.\\
+We will use similar parenthesis convention as in ${\cal M}$, so $A''B''C''$ stands for $((A''B'')C'')$, but we cannot combine many $\la$s into one.  So, $\la \la A''$ cannot be written as $\la A''$,  but we know that $\la v.\la v'.A$ can be written as $\la vv'.A$.
+\item
+ For $[x_1,\cdots, x_n]$ a list (not a set) of variables, 
+we define $\omega_{[x_1,\cdots, x_n]}: \cM \mapsto \mbox{$\Lambda$}$ by:
+\begin{enumerate}
+\item
+$\omega_{[x_1,\cdots, x_n]}(v_i) = \min\{j:v_i \equiv x_j\}$
+\item
+$\omega_{[x_1,\cdots, x_n]}(AB) = \omega_{[x_1,\cdots, x_n]}(A)\omega_{[x_1,\cdots, x_n]}(B)$
+\item
+$\omega_{[x_1,\cdots, x_n]}(\lambda x.A)= \lambda \omega_{[x,x_1,\cdots, x_n]}(A)$
+\end{enumerate}
+Hence \begin{itemize}
+\item
+$\omega_{[x, y, x,y,z]}(x) = 1$
+\item
+$\omega_{[x, y, x,y,z]}(y) = 2$
+\item
+$\omega_{[x, y, x,y,z]}(z) = 5$.
+\item
+Also $\omega_{[x, y, x,y,z]}(xyz) = 1\:2\:5$.
+\item
+Also $\omega_{[x, y, x,y,z]}(\lambda xy.xz) = \lambda \lambda 2\:7$.
+\end{itemize}
+\item
+{\bf Translation from ${\cal M}$ to $\Lambda$:}
+If our variables are ordered as  $v_1, v_2, v_3, \cdots$, then we 
+define $\omega : \cM \mapsto$ $\Lambda$
+by  $$0.\hspace{0.1in}\omega(A) = \omega_{[v_1,\cdots, v_n]}(A)  \mbox{ where 
+$FV(A) \subseteq \{v_1,\cdots,v_n\}$}.$$
+So for example, if our variables are ordered as $$x,y,z,x',y',z', \cdots$$ then the translation of $\omega(\lambda xyx'.xzx')$ from ${\cal M}$ to $\Lambda$ gives the term $ \lambda\lambda\lambda 3\: 6\:1$.  This can be seen as follows:  \\
+\begin{center}
+\begin{tabular}{l}
+$\underline{\omega(\lambda xyx'.xzx')}
+=^0 $\\$\underline{\omega_{[x,y,z]}(\lambda xyx'.xzx')} =^3 $\\
+$\lambda\underline{\omega_{[x,x,y,z]}(\lambda yx'.xzx')} =^3 $\\
+$\lambda\lambda\underline{\omega_{[y,x,x,y,z]}(\lambda x'.xzx')} =^3 $\\
+$\lambda\lambda\lambda\underline{\omega_{[x',y,x,x,y,z]}(xzx')} =^2$\\
+$ \lambda\lambda\lambda\underline{\omega_{[x',y,x,x,y,z]}(xz)}\omega_{[x',y,x,x,y,z]}(x') =^2$\\
+$\lambda\lambda\lambda\underline{\omega_{[x',y,x,x,y,z]}(x)}\omega_{[x',y,x,x,y,z]}(z)\omega_{[x',y,x,x,y,z]}(x') =^1$\\$\lambda\lambda\lambda 3\:
+\underline{\omega_{[x',y,x,x,y,z]}(z)}\omega_{[x',y,x,x,y,z]}(x') =^1 $\\$\lambda\lambda\lambda 3\: 6\:\underline{\omega_{[x',y,x,x,y,z]}(x')}=^1$\\$ \lambda\lambda\lambda 3\: 6\:1$.
+\end{tabular}
+\end{center}
+\item
+ Assume the following SML  datatypes which implement ${\cal M}$, $\Lambda$ and  ${\cal M}'$  respectively (here, if \texttt{e1} implements $A'_1$ and \texttt{e2} implements $A'_2$, then 
+ \texttt{IAPP(e1,e2)} implements $\langle A'_1\rangle A'_2$ which  stands for the function $A'_2$ applied to argument$A'_1$):
+%\vspace{-0.6in}
+\begin{verbatim}
+datatype LEXP =  
+   APP of LEXP * LEXP | LAM of string *  LEXP |  ID of string;
+
+datatype BEXP =  
+   BAPP of BEXP * BEXP | BLAM of BEXP |  BID of int;
+
+datatype IEXP =  
+   IAPP of IEXP * IEXP | ILAM of string *  IEXP |  IID of string;
+
+\end{verbatim}
+Recall the printing function on LEXP:
+\noindent
+  \begin{verbatim}
+(*Prints a term in classical lambda calculus*)
+fun printLEXP (ID v) =
+    print v
+  | printLEXP (LAM (v,e)) =
+    (print "(\\";
+     print v;
+     print ".";
+     printLEXP e;
+     print ")")
+  | printLEXP (APP(e1,e2)) =
+    (print "(";
+     printLEXP e1;
+     print " ";
+     printLEXP e2;
+     print ")");
+\end{verbatim}  
+\item
+At \url{http://www.macs.hw.ac.uk/~fairouz/foundations-2018/slides/sml-week1.sml} and \url{http://www.macs.hw.ac.uk/~fairouz/foundations-2018/slides/sml-week2.sml}, and
+\url{http://www.macs.hw.ac.uk/~fairouz/foundations-2018/slides/sml-week1} and \url{http://www.macs.hw.ac.uk/~fairouz/foundations-2018/slides/sml-week2}, 
+you find an implementation in SML of the set of
+terms $\cM$ and many operations on it like substitution and printing and free variables etc.  You can use all of these in your assignment.    Anything you use from elsewhere has to be well cited/referenced.
+\end{itemize}
+
+
+\section*{Questions}
+\begin{enumerate}
+  \item
+ For each term $A$ of the terms below, give its translation $\omega(A)$ from ${\cal M}$ to $\Lambda$ showing all the steps, their number and underlining all the parts you are working on, just like we did in the above example: 
+\begin{enumerate}
+\item
+$(\lambda xz.xz)$.
+   \hfill{(1)} % sets marks in () right justified\\
+    \color{red}
+    \begin{center}
+\begin{tabular}{l}
+$\underline{\omega(\lambda xz.xz)}=^0$\\
+.....\\
+\end{tabular}
+\end{center}
+   \color{black}
+   \item
+$(\lambda xy.xy)$.
+   \hfill{(1)} % sets marks in () right justified
+   \color{red}
+   \begin{center}
+\begin{tabular}{l}
+$\underline{\omega(\lambda xy.xy)}=^0$\\
+...\\
+\end{tabular}
+\end{center}
+\color{black}
+\item
+$xz(\lambda xy.xy)$.
+   \hfill{(1)} % sets marks in () right justified
+   \color{red}
+   \begin{center}
+\begin{tabular}{l}
+$\underline{\omega(xz(\lambda xy.xy))}=^0$\\
+...\\
+\end{tabular}
+\end{center}
+\color{black}
+    \item
+$(\lambda xy.xy)xz$.
+   \hfill{(1)} % sets marks in () right justified
+     \color{red}
+   \begin{center}
+\begin{tabular}{l}
+$\underline{\omega((\lambda xy.xy)xz)}=^0$\\
+...\\
+\end{tabular}
+\end{center}
+\color{black}
+ 
+\end{enumerate}
+
+
+\item
+Give a translation function $f$ from ${\cal M}$ to ${\cal M'}$ that will translate terms in ${\cal M}$ to terms in ${\cal M'}$ so for example:\\
+$f((\la x.x)y)= \langle y \rangle[x]x$\\
+ $f((\la x.(\la y.xy)z)(\la z'.z'))= \langle[z']z' \rangle[x] \langle z \rangle[y] \langle y \rangle  x$.
+ \hfill{(1)} % sets marks in () right justified
+ \\
+   \color{red}
+$f(v) = ??$\\
+$f(\la v.A) = ??$\\
+$f(AB) = ??$.
+ \color{black}
+ \item
+ Use your translation function $f$ of Question 2, to translate all the terms in Question 1 above into terms of ${\cal M}'$. That is, give $f(\lambda xz.xz)$ and  $f(\lambda xy.xy)$ and $f(xz(\lambda xy.xy))$ and $f((\lambda xy.xy)xz)$ showing all the steps.
+  \hfill{(2)} % sets marks in () right justified\\
+
+ \color{red}
+ \begin{itemize}
+ \item
+  $f(\lambda xz.xz) = ..=..=........$
+  \item
+  $f(\lambda xy.xy) = ..=..=........$
+  \item
+  $f(xz(\lambda xy.xy))=..=..=........$
+  \item
+     $f((\lambda xy.xy)xz)=..=..=........$
+      \end{itemize}
+ \color{black}
+
+\item
+  For each of BEXP and  IEXP  write  a printing function printBEXP (respectively printIEXP) that prints its elements nicely just like we wrote  printLEXP  which prints nicely the elements of LEXP. 
+\hfill{(2)} % sets marks in () right justified\\
+
+\color{red}
+  \begin{verbatim}
+(*Prints a term in item lambda calculus*)
+fun printIEXP (IID v) =
+........
+\end{verbatim}  
+
+ \begin{verbatim}
+(*Prints a term in classical lambda calculus with de Bruijn indices*)
+fun printBEXP (BID n) =
+......
+\end{verbatim}  
+
+
+\color{black}
+  
+ \item
+For each term below, write it in LEXP and print it using printLEXP, write its translation by $f$ into IEXP  and print it using printIEXP, and its translation by $\omega$ into BEXP  and print it using printBEXP, 
+\begin{enumerate}
+\item
+$(\lambda xz.xz)$.
+   \hfill{(1.5)} % sets marks in () right justified\\
+   
+    \color{red}
+  \begin{verbatim}
+  val vx = (ID "x");
+....
+
+printLEXP t101 gives
+.....
+
+  val Ivx = (IID "x");
+....
+
+printIEXP It101 gives
+....
+
+  val bv1 = (BID 1);
+....
+
+printBEXP Bt101 gives
+....
+\end{verbatim}
+\color{black}
+  \item
+$(\lambda xy.xy)$.
+   \hfill{(1.5)} % sets marks in () right justified\\
+   
+       \color{red}
+  \begin{verbatim}
+.....
+\end{verbatim}
+\color{black}
+\item
+$xz(\lambda xy.xy)$.
+   \hfill{(1.5)} % sets marks in () right justified\\
+   
+   \color{red}
+   .....
+\color{black}
+   \item
+$(\lambda xy.xy)xz$.
+   \hfill{(1.5)} % sets marks in () right justified\\
+   
+     \color{red}
+  \begin{verbatim}
+ ......
+\end{verbatim}
+\color{black}
+
+\end{enumerate}
+\end{enumerate}
+\end{document}
+
+  
