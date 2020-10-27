@@ -2,38 +2,50 @@
   (:domain submarine)
 
   (:objects
-    Anon Brenden
+    Anon Brenden Staff
     
-    Captain Navigator
+    Captain Navigator Shipcrew
     
-    Bridge LaunchBay Reg1
+    Bridge LaunchBay ScienceLab SickBay ExerciseArea 
     
     MiniSub
 
-    Reg1
-    
+    AbyssalPlain Ridge Empty Vortex
   )
 
 
   (:init
     (Person Brenden)
     (Person Anon)
+    (Person Staff)
 
     (Designation Brenden Captain)
     (Designation Anon Navigator)
-
+    (Designation Staff Shipcrew)
+    
     (Section Bridge)
     (Section LaunchBay)
-    (UnderWaterRegion Reg1)
+    (Section ScienceLab)
+    (Section SickBay)
+    (Section ExerciseArea)
+    
+    (UnderWaterRegion  AbyssalPlain)
+    (UnderWaterRegion  Empty)
+    (UnderWaterRegion  Ridge)
+    (UnderWaterRegion  Vortex)
     
     (Sub MiniSub)
     
-    (SectionConnection Bridge LaunchBay)
-    (SectionConnection LaunchBay Reg1)
+    (SectionConnection Bridge SickBay)
+    (SectionConnection SickBay ExerciseArea)
+    (SectionConnection ExerciseArea LaunchBay)
+    (SectionConnection LaunchBay ScienceLab)
 
     (StaffLocation Brenden Bridge)
-    (StaffLocation Anon LaunchBay)
-
+    (StaffLocation Anon Bridge)
+    
+    (InjuredStaff Staff SickBay)
+    
     (SubLocation MiniSub LaunchBay)
 
  
@@ -41,7 +53,9 @@
 
   (:goal
       (and
-        (SubLocation MiniSub Reg1)
+        (not(InjuredStaff Staff SickBay))
+        (SubLocation MiniSub  AbyssalPlain)
       )
   )
 )
+                                
