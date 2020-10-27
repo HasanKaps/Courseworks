@@ -7,6 +7,7 @@
      
         (Sub ?x)
         (SubLocation ?x ?y)
+        (SubTypes ?x ?y)
 
         (Person ?x)
         (Designation ?x ?y)
@@ -20,7 +21,7 @@
 
 (:action order
     :parameters
-        (?x ?y ?c ?a ?b ?d) 
+        (?x ?y ?z ?c ?a ?b ?d) 
     :precondition
         (and
            (Person ?x)
@@ -28,7 +29,7 @@
            (Sub ?c)
            (Section ?a)
            (SectionConnection ?b ?d)
-           
+           (UnderWaterRegion ?z)
            (Designation ?x Captain)
            (Designation ?y Navigator)
            

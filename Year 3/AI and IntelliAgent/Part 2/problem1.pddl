@@ -10,6 +10,7 @@
     
     MiniSub
 
+    Reg1
     
   )
 
@@ -23,7 +24,7 @@
 
     (Section Bridge)
     (Section LaunchBay)
-    (Section Reg1)
+    (UnderWaterRegion Reg1)
     
     (Sub MiniSub)
     
@@ -35,7 +36,7 @@
 
     (SubLocation MiniSub LaunchBay)
 
-    ; (UnderWaterRegion Reg1)
+ 
   )
 
   (:goal
