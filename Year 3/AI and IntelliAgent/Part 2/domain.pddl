@@ -15,7 +15,7 @@
         (Section ?x)
         (SectionConnection ?x ?y)
 
-        ;(UnderWaterRegion ?x)
+        (UnderWaterRegion ?x)
     )
 
 (:action order
