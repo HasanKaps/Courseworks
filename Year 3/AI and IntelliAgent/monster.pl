@@ -105,36 +105,44 @@ E classifies the effectiveness of each type against each other.
 
 */
 
-typeeffectiveness(ta,tm,e).
+typeEffectiveness(ta,tm,e).
 
-typeeffectiveness(normal,fire,ordinary).
-typeeffectiveness(normal,water,ordinary).
-typeeffectiveness(normal,electric,ordinary).
-typeeffectiveness(normal,grass,ordinary).
-typeeffectiveness(normal,normal,ordinary).
+typeEffectiveness(normal,fire,ordinary).
+typeEffectiveness(normal,water,ordinary).
+typeEffectiveness(normal,electric,ordinary).
+typeEffectiveness(normal,grass,ordinary).
+typeEffectiveness(normal,normal,ordinary).
 
-typeeffectiveness(fire,fire,weak).
-typeeffectiveness(fire,water,weak).
-typeeffectiveness(fire,electric,ordinary).
-typeeffectiveness(fire,grass,super).
-typeeffectiveness(fire,normal,ordinary).
+typeEffectiveness(fire,fire,weak).
+typeEffectiveness(fire,water,weak).
+typeEffectiveness(fire,electric,ordinary).
+typeEffectiveness(fire,grass,super).
+typeEffectiveness(fire,normal,ordinary).
 
-typeeffectiveness(water,fire,super).
-typeeffectiveness(water,water,weak).
-typeeffectiveness(water,electric,ordinary).
-typeeffectiveness(water,grass,weak).
-typeeffectiveness(water,normal,ordinary).
+typeEffectiveness(water,fire,super).
+typeEffectiveness(water,water,weak).
+typeEffectiveness(water,electric,ordinary).
+typeEffectiveness(water,grass,weak).
+typeEffectiveness(water,normal,ordinary).
 
-typeeffectiveness(electric,fire,ordinary).
-typeeffectiveness(electric,water,super).
-typeeffectiveness(electric,electric,weak).
-typeeffectiveness(electric,grass,weak).
-typeeffectiveness(electric,normal,ordinary).
+typeEffectiveness(electric,fire,ordinary).
+typeEffectiveness(electric,water,super).
+typeEffectiveness(electric,electric,weak).
+typeEffectiveness(electric,grass,weak).
+typeEffectiveness(electric,normal,ordinary).
 
-typeeffectiveness(grass,fire,weak).
-typeeffectiveness(grass,water,super).
-typeeffectiveness(grass,electric,ordinary).
-typeeffectiveness(grass,grass,weak).
-typeeffectiveness(grass,normal,ordinary).
+typeEffectiveness(grass,fire,weak).
+typeEffectiveness(grass,water,super).
+typeEffectiveness(grass,electric,ordinary).
+typeEffectiveness(grass,grass,weak).
+typeEffectiveness(grass,normal,ordinary).
 
-abilityEffectiveness(A,M,E) :- monster(M,tm), ability(M,A), typeEffectiveness(A,tm,E).
+abilityEffectiveness(A,M,E) :- monster(M,TM),ability(A,TA),typeEffectiveness(TA,TM,E).
+
+superAbility(M1,A,M2) :- monster(M1,X),monster(M2,TM),ability(A,TA),monsterability(M1,A),typeEffectiveness(TA,TM,E). 
+
+typeAbility(M,A) :- monster(M,TM),ability(A,TA),monsterability(M,A).
+
+moreEffectiveAbility(A1,A2,T) :- ability(A1,TA),ability(A2,TX),typeEffectiveness(TA,TM,T),typeEffectiveness(TX,TM,T).
+
+counterAbility(M1,A1,M2,A2) :- monster(M1,TM),monster(M2,TX),ability(A1,TA),ability(A2,TB),monsterability(M1,A1),monsterability(M2,A2),typeEffectiveness(A2,A1,E).
