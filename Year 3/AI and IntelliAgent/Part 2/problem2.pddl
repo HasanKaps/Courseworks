@@ -1,89 +1,87 @@
-  (define (problem problem2)
-    (:domain submarine)
+(define (problem DrillingMission) (:domain HWSeaPort)
+(:objects 
 
-    (:objects
-      Ziyad Brenden Anon
-      
-      ScienceOfficer Captain Navigator
-      
-      Bridge LaunchBay ScienceLab SickBay ExerciseArea
-      
-      AbyssalPlain Ridge Empty Vortex
+Brenden Andre Ziyad
 
-      Submarine 
+Captain Engineer ScienceOfficer
 
-      MineralX
+Submarine MiniSub DrillingMiniSub
 
-    )
+Bridge LaunchBay ScienceLab SickBay ExerciseArea 
 
+Ridge
 
-    (:init
-      (Person Ziyad)
-      (Person Anon)
-      (Person Brenden)
+MineralX
 
-      (Designation Ziyad ScienceOfficer)
-      (Designation Brenden Captain)
-      (Designation Anon Navigator)
-      
-      (Mineral MineralX)
-      
-      (Section Bridge)
-      (Section LaunchBay)
-      (Section ScienceLab)
-      (Section SickBay)
-      (Section ExerciseArea)
-      
-      (UnderWaterRegion  AbyssalPlain)
-      (UnderWaterRegion  Empty)
-      (UnderWaterRegion  Ridge)
-      (UnderWaterRegion  Vortex)
+DrillingReport
+HWSeaPort
+)
 
-      (Sub Submarine)
+(:init
+    ;todo: put the initial state's facts and numeric values here
+    (Person Brenden)
+    (Person Andre)
+    (Person Ziyad)
+    
+    (Designation Brenden Captain)
+    (Designation Andre Engineer)
+    (Designation Ziyad ScienceOfficer)
 
-      (SectionConnection Bridge SickBay)
-      (SectionConnection SickBay Bridge)
-      (SectionConnection SickBay ExerciseArea)
-      (SectionConnection ExerciseArea SickBay)
-      (SectionConnection ExerciseArea LaunchBay)
-      (SectionConnection ExerciseArea Bridge)
-      (SectionConnection LaunchBay ExerciseArea)
-      (SectionConnection LaunchBay ScienceLab)
-      (SectionConnection ScienceLab LaunchBay)
+    (Sub DrillingMiniSub)
+    
+    (Mineral MineralX)
 
-      (RegionConnection Empty AbyssalPlain)
-      (RegionConnection Empty Ridge)
-      (RegionConnection Empty Vortex)
-      (RegionConnection AbyssalPlain Empty)
-      (RegionConnection AbyssalPlain Ridge)
-      (RegionConnection AbyssalPlain Vortex)
-      (RegionConnection Ridge AbyssalPlain)
-      (RegionConnection Ridge Empty)
-      (RegionConnection Ridge Vortex)
-      (RegionConnection Vortex Empty)
-      (RegionConnection Vortex Ridge)
-      (RegionConnection Vortex AbyssalPlain)
+    (Section Bridge)
+    (Section LaunchBay)
+    (Section ScienceLab)
+    (Section SickBay)
+    (Section ExerciseArea)
+    
+    (SectionConnection Bridge SickBay)
+    (SectionConnection SickBay Bridge)
+    (SectionConnection SickBay ExerciseArea)
+    (SectionConnection ExerciseArea SickBay)
+    (SectionConnection ExerciseArea LaunchBay)
+    (SectionConnection ExerciseArea Bridge)
+    (SectionConnection LaunchBay ExerciseArea)
+    (SectionConnection LaunchBay ScienceLab)
+    (SectionConnection ScienceLab LaunchBay)
+    
+    (UnderWaterRegion  Ridge)
 
+    
+    (StaffLocation Brenden SickBay)
+    (StaffLocation Andre ExerciseArea)
+    (StaffLocation Ziyad LaunchBay)
+    
+    (SubLocation DrillingMiniSub LaunchBay)
+    
+)
 
-      (StaffLocation Ziyad Bridge)
-      (StaffLocation Brenden SickBay)
-      (StaffLocation Anon ExerciseArea)
-      
-      (SubLocation Submarine Vortex)
-    )
+(:goal (and
+    ;todo: put the goal condition here
+    
+    (StaffLocation Brenden Bridge)
+    (StaffLocation Andre LaunchBay)
+    
+    (OrderStaff Brenden Andre)
+    
+    (SubLocation DrillingMiniSub Ridge)
+    
+    (Drill DrillingMiniSub MineralX)
+    (MiniSubCargo MineralX)
+    
+    (SubLocation DrillingMiniSub LaunchBay)
+    (Reports DrillingReport)
+    (StaffLocation Ziyad ScienceLab)
+    (ResearchMineral Ziyad MineralX ScienceLab)
+    (SendReport DrillingReport HWSeaPort)
 
-    (:goal
-        (and
+    
+    
 
-          (StaffLocation Ziyad ScienceLab)
-          (StaffLocation Brenden Bridge)
-          (StaffLocation Anon Bridge)
+))
 
-          (ResearchMineral Ziyad MineralX ScienceLab)
-
-          (SubLocation Submarine AbyssalPlain)
-
-        )
-    )
-  )
-                                  
+;un-comment the following line if metric is needed
+;(:metric minimize (???))
+)
