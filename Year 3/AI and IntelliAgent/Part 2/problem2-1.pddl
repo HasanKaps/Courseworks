@@ -2,9 +2,9 @@
   (:domain submarine)
 
   (:objects
-    Anon Brenden Staff
+    Anon Brenden Ziyad
     
-    Captain Navigator Shipcrew
+    Captain Navigator ScienceOfficer
     
     Bridge LaunchBay ScienceLab SickBay ExerciseArea 
     
@@ -17,11 +17,11 @@
   (:init
     (Person Brenden)
     (Person Anon)
-    (Person Staff)
+    (Person Ziyad)
 
     (Designation Brenden Captain)
     (Designation Anon Navigator)
-    (Designation Staff Shipcrew)
+    (Designation Ziyad ScienceOfficer)
     
     (Section Bridge)
     (Section LaunchBay)
@@ -48,8 +48,7 @@
 
     (StaffLocation Brenden SickBay)
     (StaffLocation Anon ExerciseArea)
-    
-    (InjuredStaff Staff SickBay)
+    (StaffLocation Ziyad LaunchBay)
     
     (SubLocation Submarine LaunchBay)
 
@@ -61,8 +60,7 @@
 
         (StaffLocation Brenden Bridge)
         (StaffLocation Anon Bridge)
-
-        (not(InjuredStaff Staff SickBay))
+        (StaffLocation Ziyad ScienceLab)
 
         (SubLocation Submarine  AbyssalPlain)
       )

@@ -2,6 +2,7 @@
 
 (define (domain submarine)
     (:requirements :strips )
+
     (:constants 
         Captain
         Navigator
@@ -28,16 +29,18 @@
         
         (Section ?x)
         (SectionConnection ?x ?y)
+        (RegionConnection ?x ?y)
 
         (UnderWaterRegion ?x)
         
         (Mineral ?x)
         (ResearchMineral ?x ?y ?z)
+
     )
 
 (:action order
     :parameters
-        (?x ?y ?z ?c ?a ?b ?d) 
+        (?x ?y ?z  ?a ?b ?c ?d ?e ?f) 
     :precondition
         (and
            (Person ?x)
@@ -46,11 +49,11 @@
            (Section ?a)
            (SectionConnection ?b ?d)
            (UnderWaterRegion ?z)
-           (Designation ?x Captain)
-           (Designation ?y Navigator)
+
+           (Designation ?x ?e)
+           (Designation ?y ?e)
            
-           (StaffLocation ?x Bridge)
-           (StaffLocation ?y Bridge)
+           (StaffLocation ?x ?f)
            
            (SubLocation ?c LaunchBay)
            
@@ -64,57 +67,45 @@
 
 (:action moving
     :parameters
-        (?x ?y ?a ?b ?d) 
+        (?x ?y ?z ?a ?b ?c ?d ?e) 
     :precondition
         (and
            
            (Person ?x)
            (Person ?y)
+           (Person ?z)
            
            (Section ?a)
            (SectionConnection ?b ?d)
            
-           (Designation ?x Captain)
-           (Designation ?y Navigator)
-           
-
-           
+           (Designation ?x ?c)
            
         )
     :effect
         (and
-           (StaffLocation ?x Bridge)
-           (StaffLocation ?y Bridge)
+           (StaffLocation ?x ?e)
         )
 )
 
-(:action MiniSubLoc
+(:action SubLoc
     :parameters
         (?x ?y ?z ?a ?b) 
     :precondition
         (and
         
            (Sub ?x)
-           (SubLocation ?y ?z)
-           (SubTypes ?x ?a)
-           
            
            (UnderWaterRegion ?b)
-           
-           
+
+           (RegionConnection ?y ?z)
+
+           (SubLocation ?x ?b)
         )
     :effect
         (and
-           (not (SubLocation ?x Empty))
-           (SubLocation ?x AbyssalPlain)
-           (SubLocation ?x Vortex)
-           (SubLocation ?x Ridge)
-           
-           
-           (not (SubLocation ?x Vortex))
-           (SubLocation ?x AbyssalPlain)
-           (SubLocation ?x Ridge)
-           
+
+           (SubLocation ?x ?b)
+
         )
 )
 
@@ -139,7 +130,7 @@
 
 (:action MineralResearch
     :parameters
-        (?x ?y ?z ?a ?b ?c ?d ?e ?f) 
+        (?x ?y ?a ?b ?d ?e ?f) 
     :precondition
         (and
            
@@ -158,11 +149,49 @@
            (StaffLocation ?x ScienceLab)
            
            
-           (ResearchMineral ?x ?e ScienceLab)
         )
     :effect
         (and
            (ResearchMineral ?x ?e ScienceLab)
+        )
+)
+
+(:action VortexStudy
+    :parameters
+        (?x ?y ?a ?b ?c ?d ?e ?f ?g ?h) 
+    :precondition
+        (and
+           
+           (Person ?x)
+           (Person ?g)
+           (Person ?h)
+    
+           (Section ?a)
+
+           (Sub ?c)
+           
+           (UnderWaterRegion ?e)
+           (SubLocation ?c vortex)
+           
+           (SectionConnection ?b ?d)
+           (Section ?f)
+
+           (Designation ?x ?y)
+           
+           (Designation ?x ScienceOfficer)
+           (Designation ?g Captain)
+           (Designation ?h Navigator)
+
+           (StaffLocation ?x ScienceLab)
+           (StaffLocation ?g Bridge)
+           (StaffLocation ?h Bridge)
+           
+        )
+    :effect
+        (and
+           (StaffLocation ?x Bridge)
+           (StaffLocation ?y Bridge)
+           (SubLocation ?c ?e)
         )
 )
 
