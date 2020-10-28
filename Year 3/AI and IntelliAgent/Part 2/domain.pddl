@@ -87,27 +87,27 @@
         )
 )
 
-(:action SubLoc
-    :parameters
-        (?x ?y ?z ?a ?b) 
-    :precondition
-        (and
+; (:action SubLoc
+;     :parameters
+;         (?x ?y ?z ?a ?b) 
+;     :precondition
+;         (and
         
-           (Sub ?x)
+;            (Sub ?x)
            
-           (UnderWaterRegion ?b)
+;            (UnderWaterRegion ?b)
 
-           (RegionConnection ?y ?z)
+;            (RegionConnection ?y ?z)
 
-           (SubLocation ?x ?b)
-        )
-    :effect
-        (and
+;            (SubLocation ?x ?b)
+;         )
+;     :effect
+;         (and
 
-           (SubLocation ?x ?b)
+;            (SubLocation ?x ?b)
 
-        )
-)
+;         )
+; )
 
 (:action Injuries
     :parameters

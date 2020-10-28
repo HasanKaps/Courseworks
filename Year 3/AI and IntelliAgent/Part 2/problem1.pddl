@@ -57,7 +57,7 @@
   )
 
   (:goal
-      (and
+      (and  
 
         (StaffLocation Brenden Bridge)
         (StaffLocation Anon Bridge)
